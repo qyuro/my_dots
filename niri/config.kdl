@@ -1,0 +1,13 @@
+include "./env.kdl"
+
+include "./layer.kdl"
+
+include "./startup.kdl"
+
+include "./window.kdl"
+
+include "./bind.kdl"
+
+include "./noctalia.kdl"
+
+include "./monitor.kdl"
