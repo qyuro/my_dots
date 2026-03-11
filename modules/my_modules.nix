@@ -1,0 +1,35 @@
+{config,lib,pkgs, ...} :
+{
+ imports = [
+   ./boot.nix
+   ./amd.nix
+   #./nvidia.nix
+   ./resolved.nix
+   ./kernel.nix
+   ./network.nix
+   ./timezone.nix
+   ./gamemode.nix
+   ./opentablet.nix
+   ./steam.nix
+   ./locale.nix
+   ./for_x.nix
+   ./pipewire.nix
+   ./git.nix
+   ./qemu.nix
+   ./zsh.nix
+   ./niri.nix
+   ./throne.nix
+   ./zapret.nix
+   ./packages.nix
+   ./firefox.nix
+   ./lact.nix
+   ./tuned.nix
+   # ./tlp.nix
+   # ./power-profiles-daemon.nix
+   #./finger.nix
+   ./gnome.nix
+   ./displaymanager.nix
+   ./bluetooth.nix
+   ./ollama.nix
+ ];
+}
