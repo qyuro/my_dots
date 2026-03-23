@@ -5,4 +5,7 @@ scale 1.8
 // position x=1280 y=0
 
 }
-
+// output "DP-1" {
+// 	mode "2560x1440@119.998"
+// 	scale 2
+// }

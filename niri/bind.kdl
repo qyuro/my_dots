@@ -1,10 +1,11 @@
 binds {
     Mod+Shift+O hotkey-overlay-title="Restart noctalia-shell" {spawn-sh "pkill -9 qs;qs -c noctalia-shell &"; }
     Mod+Shift+Slash { show-hotkey-overlay; }
-    Mod+RETURN hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
-    Mod+D hotkey-overlay-title="Run an Application: launcher" { spawn-sh "noctalia-shell msg launcher toggle" ; }
+    Mod+RETURN hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
+    Mod+D hotkey-overlay-title="Run an Application: launcher" { spawn-sh "noctalia-shell ipc call launcher toggle" ; }
+
+    // Mod+D hotkey-overlay-title="Run an Application: launcher" { spawn-sh "noctalia-shell msg launcher toggle" ; }
     Mod+E { spawn "nautilus"; }
-    Mod+Shift+W { spawn "bash" "-c" "$HOME/.config/walls/toggle-wallpaper.sh"; }
     Mod+S {screenshot;}
 
     // Example volume keys mappings for PipeWire & WirePlumber.
