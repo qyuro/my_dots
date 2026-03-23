@@ -27,6 +27,7 @@
    # ./tlp.nix
    # ./power-profiles-daemon.nix
    # ./finger.nix
+   ./user.nix
    ./gnome.nix
    ./displaymanager.nix
    ./bluetooth.nix
