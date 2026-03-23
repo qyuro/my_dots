@@ -1,0 +1,9 @@
+//spawn-at-startup "gentoo-pipewire-launcher" "restart" "&" 
+spawn-at-startup "brightnessctl" "set" "100%"
+// spawn-sh-at-startup "noctalia-shell"
+spawn-at-startup "noctalia-shell"
+spawn-at-startup "swww-daemon" 
+//spawn-at-startup "/usr/libexec/polkit-gnome-authentication-agent-1"
+//spawn-at-startup "swaybg" "-i" "/home/hxteher/wallpapers/yoru.jpg" "-m" "fill"
+//spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+

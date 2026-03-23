@@ -1,0 +1,73 @@
+overview {
+//    zoom 0.3
+    workspace-shadow {
+        off
+    }
+}
+
+input {
+    keyboard{
+        xkb{
+            layout "us,ru"
+            options "grp:alt_shift_toggle" 
+        }
+    }
+    touchpad {
+        tap
+        natural-scroll
+    }
+}
+layer-rule {
+    match namespace="swww-daemon"
+    place-within-backdrop true
+}
+
+//layer-rule {
+//    match namespace="swaybg"
+//    place-within-backdrop true
+//}
+
+
+layout {
+    // Set gaps around windows in logical pixels.
+    gaps 25
+    background-color "transparent"
+
+    center-focused-column "never"
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    default-column-width { proportion 0.5; }
+    
+    focus-ring {
+        off
+    }
+
+    border {
+        on
+        width 1
+        active-color "#d8dee9"
+        inactive-color "#434c5e"
+        urgent-color "#bf616a"
+    }
+
+}
+
+layer-rule {
+    match namespace="waybar"
+    match at-startup=true
+//
+//    opacity 0.6
+//
+//    shadow {
+//        on
+//        softness 10
+//        spread 10
+//        offset x=0 y=5
+//    }
+    place-within-backdrop true
+    geometry-corner-radius 10
+}
