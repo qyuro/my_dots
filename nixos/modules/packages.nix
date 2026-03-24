@@ -60,6 +60,8 @@
   # amdvlk
   # rocm-opencl-icd
   # glaxnimate
+  # TRY FROM NUR
+  nur.repos.hythera.waterfox-bin
   ] ++ (with unstable;[
   quickshell
   noctalia-shell

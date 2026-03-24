@@ -5,9 +5,13 @@
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     polymc.url = "github:PolyMC/PolyMC";
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs,nixpkgs-unstable,... }@inputs:
+  outputs = { self, nixpkgs,nixpkgs-unstable,polymc,nur,... }@inputs:
     let
       system = "x86_64-linux";
     in {
@@ -19,10 +23,19 @@
             config.allowUnfree = true;
             };
         inherit inputs system;
+        nur = import nur {
+          nurpkgs = nixpkgs;
+          inherit system;
+          };
         };
         
         modules = [
-          { nixpkgs.overlays = [ inputs.polymc.overlay ];}
+          {
+          nixpkgs.overlays = [
+              polymc.overlay
+              nur.overlays.default
+            ];
+          }
           ./nixos/configuration.nix
         ];   
       };  
