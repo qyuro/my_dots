@@ -11,7 +11,7 @@
   zed-editor
   ###SOCIETY###
   vesktop
-  #ayugram-desktop
+  ayugram-desktop
   ###FOR_DESKTOP_AND_JOKES###
   obsidian
   fastfetch
@@ -39,13 +39,8 @@
   opentabletdriver
   qbittorrent
   protonup-qt
-  # lunar-client
   polymc
-  # fjordlauncher
   ###FOR_PROGRAMMING###
-  # go
-  # rustc
-  # cargo
   lazygit
   tree
   python313
