@@ -28,6 +28,7 @@
   blender
   eog
   ventoy-full-gtk
+  kdePackages.ark
   ##EDITORS_FOR_WORD###  
   onlyoffice-desktopeditors
   ###RUSSIAN PRIKOL
@@ -51,6 +52,9 @@
   typst-live
   typst
   typstyle
+  #tor
+  tor-browser
+  torsocks
  # TEST THIS FROM AMPRESNAD  GPU stuff 
   # amdvlk
   # rocm-opencl-icd

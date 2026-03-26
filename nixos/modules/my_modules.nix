@@ -3,7 +3,6 @@
  imports = [
    ./boot.nix
    ./amd.nix
-   #./nvidia.nix
    ./resolved.nix
    ./kernel.nix
    ./network.nix
@@ -24,14 +23,13 @@
    ./firefox.nix
    ./lact.nix
    ./tuned.nix
-   # ./tlp.nix
    # ./power-profiles-daemon.nix
-   # ./finger.nix
    ./user.nix
    ./gnome.nix
    ./displaymanager.nix
    ./bluetooth.nix
    ./ollama.nix
    ./services.nix
+   ./tor.nix
  ];
 }
