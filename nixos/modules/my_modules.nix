@@ -18,7 +18,7 @@
    ./zsh.nix
    ./niri.nix
    ./throne.nix
-   ./zapret.nix
+   # ./zapret.nix
    ./packages.nix
    ./firefox.nix
    ./lact.nix

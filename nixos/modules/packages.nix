@@ -44,7 +44,9 @@
   ###FOR_PROGRAMMING###
   lazygit
   tree
-  python313
+  python311
+  nodejs
+  pnpm
   # uv
   #ida-free
   ###TYPST###

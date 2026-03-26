@@ -25,11 +25,11 @@
     consoleLogLevel = 3;
     initrd.verbose = false;
     kernelParams = [
-      "quiet"
+      # "quiet"
       "udev.log_level=3"
       # "reboot=efi"
       # "acpi=force"
-      "systemd.show_status=auto"
+      # "systemd.show_status=auto"
     ];
     };
     boot.initrd.kernelModules = [ "amdgpu" ];
