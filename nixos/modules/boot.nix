@@ -17,11 +17,11 @@
    };
   boot.loader.systemd-boot.enable = false;
   boot ={
-    plymouth = {
-      enable = true;
-      theme = "spinner";
+    # plymouth = {
+      # enable = true;
+      # theme = "spinner";
 
-    };
+    # };
     consoleLogLevel = 3;
     initrd.verbose = false;
     kernelParams = [
