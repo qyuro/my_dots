@@ -71,13 +71,18 @@
   clang
   fasm
   telegram-desktop
-  rustc
-  cargo
+  # rustc
+  # cargo
   uv
   go
-  rustfmt
+  # rustfmt
   clippy
   rust-analyzer
+  rustup
+  openssl
+  openssl_oqs
+  openssl_legacy
+  pkg-config
   ]);
    nixpkgs.config.permittedInsecurePackages = [
                 "ventoy-1.1.10"
