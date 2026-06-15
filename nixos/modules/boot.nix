@@ -3,35 +3,35 @@
    boot.loader = {
      efi = {
        canTouchEfiVariables = true;
-       efiSysMountPoint = "/boot";
+       # efiSysMountPoint = "/boot";
      };
-     grub = {
-       gfxmodeEfi = "2880x1800";
-       theme = "${pkgs.catppuccin-grub}";
-       efiSupport = true;
-       device = "nodev";
-       useOSProber = true;
-       #for 2880x1800
-       fontSize = 22;
-     };
+       # grub = {
+       # gfxmodeEfi = "2880x1800";
+       # theme = "${pkgs.catppuccin-grub}";
+       # efiSupport = true;
+       # device = "nodev";
+       # useOSProber = true;
+       #for 2880x18
+       # fontSize = 22;
+     # };
    };
-  boot.loader.systemd-boot.enable = false;
-  boot ={
+  boot.loader.systemd-boot.enable = true;
+  # boot ={
     # plymouth = {
       # enable = true;
       # theme = "spinner";
 
     # };
-    consoleLogLevel = 3;
-    initrd.verbose = false;
-    kernelParams = [
+    # consoleLogLevel = 3;
+    # initrd.verbose = false;
+    # kernelParams = [
       # "quiet"
-      "udev.log_level=3"
+      # "udev.log_level=3"
       # "reboot=efi"
       # "acpi=force"
       # "systemd.show_status=auto"
-    ];
-    };
+    # ];
+    # };
     boot.initrd.kernelModules = [ "amdgpu" ];
     # boot.kernelPatches = [{
       # name = "acpi-table-upgrade";

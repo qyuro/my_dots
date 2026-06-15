@@ -8,7 +8,7 @@
    ./network.nix
    ./timezone.nix
    ./gamemode.nix
-   ./opentablet.nix
+   # ./opentablet.nix
    ./steam.nix
    ./locale.nix
    ./for_x.nix
@@ -25,8 +25,8 @@
    ./tuned.nix
    # ./power-profiles-daemon.nix
    ./user.nix
-   ./gnome.nix
-   ./displaymanager.nix
+   # ./gnome.nix
+   # ./displaymanager.nix
    ./bluetooth.nix
    ./ollama.nix
    ./services.nix
