@@ -21,7 +21,7 @@
   xwayland
   xwayland-satellite
   nvtopPackages.full
-  swww
+  awww
   brightnessctl
   polkit_gnome
   btop
