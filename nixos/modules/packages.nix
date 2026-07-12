@@ -7,6 +7,10 @@
   with pkgs; [
   #EMACS
   emacs
+  fd
+  shellcheck
+  symbola
+  ripgrep
   # FOR PENTEST
   nmap
   #TEST BSPWM
@@ -17,6 +21,7 @@
   zed-editor
   ###SOCIETY###
   vesktop
+  _64gram
   ayugram-desktop
   ###FOR_DESKTOP_AND_JOKES###
   obsidian
@@ -48,6 +53,14 @@
   protonplus
   # polymc
   ###FOR_PROGRAMMING###
+  gnumake
+  cmake
+  gopls
+  gomodifytags
+  gotests
+  gore
+  multimarkdown
+  nixfmt
   #ida-free
   ###TYPST###
   # typstwriter
