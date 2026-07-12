@@ -33,6 +33,7 @@
    ./happ-module.nix
    ./test-happ.nix
    ./hyprland.nix
+   ./nixld.nix
    # ./tor.nix
  ];
 }
