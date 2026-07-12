@@ -5,9 +5,20 @@
   };
   environment.systemPackages =
   with pkgs; [
+  # rustup
+  # FOR PENTEST
+  nmap
+  #TEST BSPWM
+  rofi
+  bspwm
+  sxhkd
+  chromium
+  #TEST STEM_TUI
+  # steam-tui
+  # steam-cmd
   ###WRITERS##
   helix
-  code-cursor
+  # code-cursor
   zed-editor
   ###SOCIETY###
   vesktop
@@ -16,7 +27,8 @@
   obsidian
   # fastfetch
   p7zip
-  foot
+  yazi
+  # foot
   ghostty
   xwayland
   xwayland-satellite
@@ -25,53 +37,44 @@
   brightnessctl
   polkit_gnome
   btop
-  powertop
+  # powertop
   gparted
   eog
   kdePackages.ark
   ##EDITORS_FOR_WORD###  
   onlyoffice-desktopeditors
   ###RUSSIAN PRIKOL
-  zapret
+  #   # zapret
   ###JUST_NAUTILIUS###
   nautilus
   ###GAMES###
-  osu-lazer-bin
-  opentabletdriver
+  # osu-lazer-bin
+  # opentabletdriver
   qbittorrent
-  protonup-qt
+  protonplus
+  # protonup-qt
   # polymc
   ###FOR_PROGRAMMING###
-  lazygit
-  tree
-  nodejs
-  pnpm
+  # lazygit
+  # tree
+  # nodejs
+  # pnpm
   #ida-free
   ###TYPST###
-  typstwriter
-  typst-live
-  typst
-  typstyle
+  # typstwriter
+  # typst-live
+  # typst
+  # typstyle
   #tor
-  tor-browser
-  torsocks
+  # tor-browser
+  # torsocks
  # TEST THIS FROM AMPRESNAD  GPU stuff 
   # amdvlk
   # rocm-opencl-icd
   # glaxnimate
   # TRY FROM NUR
   # nur.repos.hythera.waterfox-bin
-  nur.repos.trev.helium
-  # FOR NEU_WAYLAND
-  # hevel
-  # shko
-  neuswc
-  neumenu
-  neuwm
-  swiv
-  neuwld
-  neuipc
-  wawa
+  # nur.repos.trev.helium
   ] ++ (with unstable;[
   quickshell
   noctalia-shell
@@ -79,19 +82,8 @@
   gcc
   clang
   fasm
-  telegram-desktop
-  # rustc
-  # cargo
   uv
   go
-  # rustfmt
-  # clippy
-  # rust-analyzer
-  # rustup
-  # openssl
-  # openssl_oqs
-  # openssl_legacy
-  # pkg-config
   fastfetch
   ]);
 }

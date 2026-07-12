@@ -3,7 +3,7 @@
  imports = [
    ./boot.nix
    ./amd.nix
-   ./resolved.nix
+   # ./resolved.nix
    ./kernel.nix
    ./network.nix
    ./timezone.nix
@@ -14,7 +14,7 @@
    ./for_x.nix
    ./pipewire.nix
    ./git.nix
-   ./qemu.nix
+   # ./qemu.nix
    ./zsh.nix
    ./niri.nix
    ./throne.nix
@@ -22,14 +22,19 @@
    ./packages.nix
    ./firefox.nix
    ./lact.nix
-   ./tuned.nix
+   # ./tuned.nix
    # ./power-profiles-daemon.nix
    ./user.nix
    # ./gnome.nix
-   # ./displaymanager.nix
+   ./displaymanager.nix
    ./bluetooth.nix
-   ./ollama.nix
+   # ./ollama.nix
    ./services.nix
-   ./tor.nix
+   #TEST HAPP
+   ./happ-module.nix
+   # ./happ.nix
+   ./test-happ.nix
+   ./hyprland.nix
+   # ./tor.nix
  ];
 }
