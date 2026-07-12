@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
-    polymc.url = "github:PolyMC/PolyMC";
+    # polymc.url = "github:PolyMC/PolyMC";
     fenix={
       url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -19,7 +19,7 @@
     # };
   };
 
-  outputs = { self, nixpkgs,nixpkgs-unstable,polymc,fenix, ... }@inputs:
+  outputs = { self, nixpkgs,nixpkgs-unstable,fenix, ... }@inputs:
     let
       system = "x86_64-linux";
       rustToolchain = fenix.packages.${system}.stable.toolchain;
@@ -43,7 +43,7 @@
         modules = [
           {
           nixpkgs.overlays = [
-              polymc.overlay
+              # polymc.overlay
               # nur.overlays.default
               # neu-nix.overlays.default
             ];
