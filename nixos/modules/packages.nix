@@ -9,13 +9,7 @@
   # FOR PENTEST
   nmap
   #TEST BSPWM
-  rofi
-  bspwm
-  sxhkd
   chromium
-  #TEST STEM_TUI
-  # steam-tui
-  # steam-cmd
   ###WRITERS##
   helix
   # code-cursor
@@ -40,11 +34,10 @@
   # powertop
   gparted
   eog
-  kdePackages.ark
   ##EDITORS_FOR_WORD###  
   onlyoffice-desktopeditors
   ###RUSSIAN PRIKOL
-  #   # zapret
+  # zapret
   ###JUST_NAUTILIUS###
   nautilus
   ###GAMES###
@@ -52,13 +45,8 @@
   # opentabletdriver
   qbittorrent
   protonplus
-  # protonup-qt
-  # polymc
+  polymc
   ###FOR_PROGRAMMING###
-  # lazygit
-  # tree
-  # nodejs
-  # pnpm
   #ida-free
   ###TYPST###
   # typstwriter

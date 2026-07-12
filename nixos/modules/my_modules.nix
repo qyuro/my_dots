@@ -18,11 +18,10 @@
    ./zsh.nix
    ./niri.nix
    ./throne.nix
-   # ./zapret.nix
    ./packages.nix
    ./firefox.nix
    ./lact.nix
-   # ./tuned.nix
+   ./tuned.nix
    # ./power-profiles-daemon.nix
    ./user.nix
    # ./gnome.nix
@@ -32,7 +31,6 @@
    ./services.nix
    #TEST HAPP
    ./happ-module.nix
-   # ./happ.nix
    ./test-happ.nix
    ./hyprland.nix
    # ./tor.nix
