@@ -5,7 +5,8 @@
   };
   environment.systemPackages =
   with pkgs; [
-  # rustup
+  #EMACS
+  emacs
   # FOR PENTEST
   nmap
   #TEST BSPWM
