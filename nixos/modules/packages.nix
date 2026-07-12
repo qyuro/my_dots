@@ -46,7 +46,7 @@
   # opentabletdriver
   qbittorrent
   protonplus
-  polymc
+  # polymc
   ###FOR_PROGRAMMING###
   #ida-free
   ###TYPST###
