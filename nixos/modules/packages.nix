@@ -5,6 +5,17 @@
   };
   environment.systemPackages =
   with pkgs; [
+  #for sway
+  wmenu
+  #xdg maybe not need
+  xdg-desktop-portal-wlr
+  xdg-desktop-portal-hyprland
+  xdg-desktop-portal-gtk
+  hyprshot
+  # for x
+  picom
+  rofi
+  xwallpaper
   #EMACS
   emacs
   fd
@@ -13,7 +24,6 @@
   ripgrep
   # FOR PENTEST
   nmap
-  #TEST BSPWM
   chromium
   ###WRITERS##
   helix
@@ -29,16 +39,14 @@
   p7zip
   yazi
   # foot
+  alacritty
   ghostty
   xwayland
   xwayland-satellite
   nvtopPackages.full
   awww
   brightnessctl
-  polkit_gnome
-  btop
   # powertop
-  gparted
   eog
   ##EDITORS_FOR_WORD###  
   onlyoffice-desktopeditors
@@ -51,6 +59,7 @@
   # opentabletdriver
   qbittorrent
   protonplus
+  protonup-qt
   # polymc
   ###FOR_PROGRAMMING###
   gnumake

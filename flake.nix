@@ -5,10 +5,10 @@
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
     # polymc.url = "github:PolyMC/PolyMC";
-    fenix={
-      url = "github:nix-community/fenix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # fenix={
+      # url = "github:nix-community/fenix";
+      # inputs.nixpkgs.follows = "nixpkgs";
+    # };
     # nur = {
       # url = "github:nix-community/NUR";
       # inputs.nixpkgs.follows = "nixpkgs";
@@ -19,10 +19,10 @@
     # };
   };
 
-  outputs = { self, nixpkgs,nixpkgs-unstable,fenix, ... }@inputs:
+  outputs = { self, nixpkgs,nixpkgs-unstable, ... }@inputs:
     let
       system = "x86_64-linux";
-      rustToolchain = fenix.packages.${system}.stable.toolchain;
+      # rustToolchain = fenix.packages.${system}.stable.toolchain;
     in {
      # nixos - system hostname
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {

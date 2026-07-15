@@ -11,13 +11,13 @@
    # ./opentablet.nix
    ./steam.nix
    ./locale.nix
-   ./for_x.nix
+   # ./for_x.nix
    ./pipewire.nix
    ./git.nix
    # ./qemu.nix
    ./zsh.nix
-   ./niri.nix
-   ./throne.nix
+   # ./niri.nix
+   # ./throne.nix
    ./packages.nix
    ./firefox.nix
    ./lact.nix
@@ -34,6 +34,7 @@
    ./test-happ.nix
    ./hyprland.nix
    ./nixld.nix
+   ./sway.nix
    # ./tor.nix
  ];
 }
