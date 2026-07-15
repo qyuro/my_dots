@@ -38,11 +38,9 @@
   # fastfetch
   p7zip
   yazi
-  # foot
-  alacritty
+  kitty
   ghostty
   xwayland
-  xwayland-satellite
   nvtopPackages.full
   awww
   brightnessctl
