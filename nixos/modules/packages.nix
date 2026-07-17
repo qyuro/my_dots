@@ -6,23 +6,13 @@
   environment.systemPackages =
   with pkgs; [
   #for sway
-  wmenu
-  #xdg maybe not need
-  xdg-desktop-portal-wlr
-  xdg-desktop-portal-hyprland
-  xdg-desktop-portal-gtk
-  hyprshot
-  # for x
-  picom
-  rofi
-  xwallpaper
-  #EMACS
+  ###EMACS
   emacs
   fd
   shellcheck
   symbola
   ripgrep
-  # FOR PENTEST
+  ### FOR PENTEST
   nmap
   chromium
   ###WRITERS##
@@ -35,7 +25,6 @@
   ayugram-desktop
   ###FOR_DESKTOP_AND_JOKES###
   obsidian
-  # fastfetch
   p7zip
   yazi
   kitty
@@ -56,8 +45,6 @@
   # osu-lazer-bin
   # opentabletdriver
   qbittorrent
-  protonplus
-  protonup-qt
   # polymc
   ###FOR_PROGRAMMING###
   gnumake
@@ -93,6 +80,7 @@
   fasm
   uv
   go
+  protonup-qt
   fastfetch
   ]);
 }

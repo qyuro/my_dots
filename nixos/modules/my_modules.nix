@@ -32,9 +32,11 @@
    #TEST HAPP
    ./happ-module.nix
    ./test-happ.nix
-   ./hyprland.nix
+   # ./hyprland.nix
    ./nixld.nix
    ./sway.nix
+   ./obs.nix
+   ./rtkit.nix
    # ./tor.nix
  ];
 }
