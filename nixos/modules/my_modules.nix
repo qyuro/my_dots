@@ -37,6 +37,9 @@
    ./sway.nix
    ./obs.nix
    ./rtkit.nix
+   # ./river.nix
+   # ./kde.nix
+   # ./mango.nix
    # ./tor.nix
  ];
 }

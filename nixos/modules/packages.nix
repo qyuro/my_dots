@@ -5,7 +5,11 @@
   };
   environment.systemPackages =
   with pkgs; [
-  #for sway
+  ### FOR SWAY?
+  xdg-desktop-portal-wlr
+  xdg-desktop-portal-gtk
+  xdg-desktop-portal-gnome
+  wofi
   ###EMACS
   emacs
   fd
@@ -28,6 +32,7 @@
   p7zip
   yazi
   kitty
+  foot
   ghostty
   xwayland
   nvtopPackages.full
