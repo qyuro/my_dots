@@ -5,16 +5,18 @@
   };
   environment.systemPackages =
   with pkgs; [
-  ### FOR SWAY?
-  xdg-desktop-portal-wlr
-  xdg-desktop-portal-gtk
-  xdg-desktop-portal-gnome
-  wofi
+  faugus-launcher
+  ###TONELIB
+  # tonelib-gfx
+  ###for sway
+  wayshot
+  # grim
   ###EMACS
-  emacs
+  emacs-gtk
   fd
   shellcheck
-  symbola
+  # symbola
+  emacsPackages.vterm
   ripgrep
   ### FOR PENTEST
   nmap
@@ -25,7 +27,6 @@
   zed-editor
   ###SOCIETY###
   vesktop
-  _64gram
   ayugram-desktop
   ###FOR_DESKTOP_AND_JOKES###
   obsidian

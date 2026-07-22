@@ -11,7 +11,7 @@
    # ./opentablet.nix
    ./steam.nix
    ./locale.nix
-   # ./for_x.nix
+   ./for_x.nix
    ./pipewire.nix
    ./git.nix
    # ./qemu.nix
@@ -37,6 +37,7 @@
    ./sway.nix
    ./obs.nix
    ./rtkit.nix
+   ./fonts.nix
    # ./river.nix
    # ./kde.nix
    # ./mango.nix

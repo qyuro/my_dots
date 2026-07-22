@@ -1,6 +1,5 @@
 { config, pkgs, ... }:
 {
-    # services.xserver.xkb.layout = "us";
     services.xserver = {
         enable = true;
         displayManager.startx.enable = true;
@@ -12,14 +11,15 @@
                 awesome-wm-widgets                
             ];
         };
-        windowManager.qtile = {
-            enable = true;
-            extraPackages = python3Packages: with python3Packages; [
-                qtile-extras  
-            ];
-        };
+        # windowManager.qtile = {
+            # enable = true;
+            # extraPackages = python3Packages: with python3Packages; [
+                # qtile-extras  
+            # ];
+        # };
     };
     # services.xserver = {
+      # displayManager.startx.enable = true;
       # enable = true;
       # windowManager.dwm= {
         # enable = true;
