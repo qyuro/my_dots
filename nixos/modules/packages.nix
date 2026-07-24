@@ -9,7 +9,7 @@
   ###TONELIB
   # tonelib-gfx
   ###for sway
-  wayshot
+  hyprshot
   # grim
   ###EMACS
   emacs-gtk
@@ -37,6 +37,7 @@
   ghostty
   xwayland
   nvtopPackages.full
+  htop
   awww
   brightnessctl
   # powertop

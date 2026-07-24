@@ -11,7 +11,7 @@
    # ./opentablet.nix
    ./steam.nix
    ./locale.nix
-   ./for_x.nix
+   # ./for_x.nix
    ./pipewire.nix
    ./git.nix
    # ./qemu.nix
@@ -32,9 +32,9 @@
    #TEST HAPP
    ./happ-module.nix
    ./test-happ.nix
-   # ./hyprland.nix
+   ./hyprland.nix
    ./nixld.nix
-   ./sway.nix
+   # ./sway.nix
    ./obs.nix
    ./rtkit.nix
    ./fonts.nix
