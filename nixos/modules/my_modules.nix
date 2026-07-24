@@ -11,7 +11,7 @@
    # ./opentablet.nix
    ./steam.nix
    ./locale.nix
-   # ./for_x.nix
+   ./for_x.nix
    ./pipewire.nix
    ./git.nix
    # ./qemu.nix
