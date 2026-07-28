@@ -21,10 +21,13 @@
     services.xserver = {
       displayManager.startx.enable = true;
       enable = true;
+      windowManager.i3 = {
+        enable = true;  
+      };
       windowManager.dwm= {
         enable = true;
         package = pkgs.dwm.overrideAttrs {
-            src = ./config/dwm;
+            src = ./dwm;
         };
       };
     };

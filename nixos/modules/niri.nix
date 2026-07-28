@@ -1,6 +1,6 @@
 {
     programs.niri={
         enable = true;
-        # useNautilus = true;
+        useNautilus = true;
     };
 }

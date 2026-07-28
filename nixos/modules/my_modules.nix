@@ -11,7 +11,7 @@
    # ./opentablet.nix
    ./steam.nix
    ./locale.nix
-   ./for_x.nix
+   # ./for_x.nix
    ./pipewire.nix
    ./git.nix
    # ./qemu.nix
@@ -38,8 +38,10 @@
    ./obs.nix
    ./rtkit.nix
    ./fonts.nix
+   ./udisks2.nix
+   ./virtualbox.nix
    # ./river.nix
-   # ./kde.nix
+   ./kde.nix
    # ./mango.nix
    # ./tor.nix
  ];

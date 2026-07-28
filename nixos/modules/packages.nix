@@ -5,9 +5,11 @@
   };
   environment.systemPackages =
   with pkgs; [
+  ###FOR X
+  polybarFull
   faugus-launcher
   ###TONELIB
-  # tonelib-gfx
+  tonelib-gfx
   ###for sway
   hyprshot
   # grim
@@ -31,11 +33,14 @@
   ###FOR_DESKTOP_AND_JOKES###
   obsidian
   p7zip
+  # vm-curator
+  hyprpolkitagent
   yazi
+  totem
   kitty
-  foot
-  ghostty
+  xwallpaper
   xwayland
+  xwayland-satellite
   nvtopPackages.full
   htop
   awww
