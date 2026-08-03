@@ -25,7 +25,7 @@
   chromium
   ###WRITERS##
   helix
-  # code-cursor
+  code-cursor
   zed-editor
   ###SOCIETY###
   vesktop
@@ -59,6 +59,7 @@
   qbittorrent
   # polymc
   ###FOR_PROGRAMMING###
+  usbutils
   gnumake
   cmake
   gopls

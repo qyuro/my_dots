@@ -39,9 +39,12 @@
    ./rtkit.nix
    ./fonts.nix
    ./udisks2.nix
-   ./virtualbox.nix
+   # ./virtualbox.nix
+   ./vm-curator.nix
+   ./finger.nix
    # ./river.nix
-   ./kde.nix
+   # ./kde.nix
+   # ./nixvim.nix
    # ./mango.nix
    # ./tor.nix
  ];

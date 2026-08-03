@@ -4,7 +4,9 @@
   inputs = {
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
-    # polymc.url = "github:PolyMC/PolyMC";
+    # polymc={
+      # url = "github:PolyMC/PolyMC";
+    # };
     # fenix={
       # url = "github:nix-community/fenix";
       # inputs.nixpkgs.follows = "nixpkgs";
@@ -17,9 +19,20 @@
       # url = "github:ricardomaps/neu-nix";
       # inputs.nixpkgs.follows="nixpkgs";
     # };
+    home-manager = {
+      url = "github:nix-community/home-manager/release-26.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nixvim = {
+      # url = "github:nix-community/nixvim";
+      url = "github:nix-community/nixvim/nixos-26.05";
+      # inputs.nixpkgs.follows = "nixpkgs";
+    };
+    vm-curator.url = "github:mroboff/vm-curator";
+    hyprland.url = "github:hyprwm/Hyprland";
   };
 
-  outputs = { self, nixpkgs,nixpkgs-unstable, ... }@inputs:
+  outputs = { self, nixpkgs,nixpkgs-unstable,home-manager,nixvim,vm-curator, ... }@inputs:
     let
       system = "x86_64-linux";
       # rustToolchain = fenix.packages.${system}.stable.toolchain;
@@ -50,6 +63,14 @@
           }
           ./nixos/configuration.nix
         ];   
-      };  
+      };
+      homeConfigurations.hxteher= home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.${system};
+        extraSpecialArgs = { inherit inputs; };
+        modules = [
+          ./nixos/home.nix
+          nixvim.homeModules.nixvim
+        ];
+      };
     };
 }
