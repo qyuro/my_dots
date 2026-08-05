@@ -1,12 +1,14 @@
-{config,lib,pkgs,unstable, ...}:
+{inputs,config,lib,pkgs,unstable, ...}:
 {
   nixpkgs.config = {
     allowUnfree = true;
   };
   environment.systemPackages =
   with pkgs; [
+  inputs.polymc.packages.${pkgs.system}.default
+  # polymc
   ###FOR X
-  polybarFull
+  # polybarFull
   faugus-launcher
   ###TONELIB
   tonelib-gfx
@@ -22,7 +24,6 @@
   ripgrep
   ### FOR PENTEST
   nmap
-  chromium
   ###WRITERS##
   helix
   code-cursor
@@ -32,15 +33,14 @@
   ayugram-desktop
   ###FOR_DESKTOP_AND_JOKES###
   obsidian
+  chromium
+  rmpc
   p7zip
-  # vm-curator
   hyprpolkitagent
   yazi
   totem
   kitty
-  xwallpaper
   xwayland
-  xwayland-satellite
   nvtopPackages.full
   htop
   awww
