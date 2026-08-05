@@ -40,6 +40,7 @@
    ./fonts.nix
    ./udisks2.nix
    # ./virtualbox.nix
+   # ./wayfire.nix
    ./xdg.nix
    ./vm-curator.nix
    ./finger.nix

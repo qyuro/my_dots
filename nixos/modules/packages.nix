@@ -5,7 +5,7 @@
   };
   environment.systemPackages =
   with pkgs; [
-  inputs.polymc.packages.${pkgs.system}.default
+  inputs.polymc.packages.${pkgs.stdenv.hostPlatform.system}.default
   # polymc
   ###FOR X
   # polybarFull
