@@ -34,7 +34,7 @@
   ###FOR_DESKTOP_AND_JOKES###
   obsidian
   chromium
-  rmpc
+  # rmpc
   p7zip
   hyprpolkitagent
   yazi

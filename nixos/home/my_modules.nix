@@ -2,6 +2,7 @@
 {
  imports =
  [
+   ./rmpc.nix
    ./hyprland.nix
    ./nixvim.nix
  ];
