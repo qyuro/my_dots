@@ -138,22 +138,6 @@
         "type": "github"
       }
     },
-    "nixpkgs_3": {
-      "locked": {
-        "lastModified": 1777578337,
-        "narHash": "sha256-Ad49moKWeXtKBJNy2ebiTQUEgdLyvGmTeykAQ9xM+Z4=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "15f4ee454b1dce334612fa6843b3e05cf546efab",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixvim": {
       "inputs": {
         "flake-parts": "flake-parts",
@@ -172,6 +156,26 @@
         "owner": "nix-community",
         "ref": "nixos-26.05",
         "repo": "nixvim",
+        "type": "github"
+      }
+    },
+    "noctalia": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs-unstable"
+        ]
+      },
+      "locked": {
+        "lastModified": 1786338498,
+        "narHash": "sha256-qy3Cheg/FQ9ZaBPTIgdq4IkmkNtC6XBpmtC8nT+wU/Y=",
+        "owner": "noctalia-dev",
+        "repo": "noctalia",
+        "rev": "45e721ba0fb47d6efc00ca47e156237954037c99",
+        "type": "github"
+      },
+      "original": {
+        "owner": "noctalia-dev",
+        "repo": "noctalia",
         "type": "github"
       }
     },
@@ -205,8 +209,8 @@
         "nixpkgs-old": "nixpkgs-old",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "nixvim": "nixvim",
-        "polymc": "polymc",
-        "vm-curator": "vm-curator"
+        "noctalia": "noctalia",
+        "polymc": "polymc"
       }
     },
     "systems": {
@@ -237,24 +241,6 @@
       "original": {
         "owner": "marzer",
         "repo": "tomlplusplus",
-        "type": "github"
-      }
-    },
-    "vm-curator": {
-      "inputs": {
-        "nixpkgs": "nixpkgs_3"
-      },
-      "locked": {
-        "lastModified": 1785447042,
-        "narHash": "sha256-lq6UuT0ECmuYT2sByYVUi8GHTM2mq0X1c45/WA8+Zss=",
-        "owner": "mroboff",
-        "repo": "vm-curator",
-        "rev": "03eb69e019df4a802b86fd44f5624360a86e0bf9",
-        "type": "github"
-      },
-      "original": {
-        "owner": "mroboff",
-        "repo": "vm-curator",
         "type": "github"
       }
     }

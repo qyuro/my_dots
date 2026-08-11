@@ -44,8 +44,8 @@ hl.monitor({
 -- Set programs that you use
 local terminal    = "kitty"
 local fileManager = "nautilus"
-local menu        = "noctalia-shell ipc call launcher toggle"
-
+-- local menu        = "noctalia-shell ipc call launcher toggle"
+local menu = "noctalia msg panel-toggle launcher"
 
 -------------------
 ---- AUTOSTART ----
@@ -57,8 +57,9 @@ local menu        = "noctalia-shell ipc call launcher toggle"
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function () 
-  hl.exec_cmd("noctalia-shell")
-  hl.exec_cmd("awww-daemon")
+  -- hl.exec_cmd("noctalia-shell")
+  hl.exec_cmd("noctalia")
+  -- hl.exec_cmd("awww-daemon")
   -- hl.exec_cmd("hyprctl plugin load /nix/store/dil4f7lm800vlqzwbhv7s9ifgwvk976x-hy3-0.56.0.1/lib/libhy3.so")
 --   hl.exec_cmd("waybar & hyprpaper & firefox")
 end)
@@ -74,7 +75,9 @@ end)
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
 
 hl.env("XCURSOR_SIZE", "24")
+-- hl.env("XCURSOR_THEME,Bibata-Modern-Ice")
 hl.env("HYPRCURSOR_SIZE", "24")
+-- hl.env("HYPRCURSOR_THEME,Bibata-Modern-Ice")
 
 hl.env("QT_QPA_PLATFORM", "wayland;xcb")
 hl.env("SDL_VIDEODRIVER", "wayland,x11")
@@ -116,8 +119,8 @@ hl.config({
         border_size = 2,
 
         col = {
-            active_border   = { colors = {"rgb(ebdbb2)", "rgb(8ec07c)"}, angle = 45 },
-            inactive_border = "rgb(282828)",
+            active_border   = { colors = {"rgb(aaaaaa)", "rgb(a7a7a7)"}, angle = 45 },
+            inactive_border = "rgb(111111)",
         },
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
@@ -154,7 +157,7 @@ hl.config({
     },
 
     animations = {
-        enabled = false,
+        enabled = true,
     },
 })
 

@@ -30,15 +30,19 @@
       url = "github:nix-community/nixvim/nixos-26.05";
       # inputs.nixpkgs.follows = "nixpkgs";
     };
-    vm-curator.url = "github:mroboff/vm-curator";
+    # vm-curator.url = "github:mroboff/vm-curator";
     # hyprland.url = "github:hyprwm/Hyprland";
     # hyprland-plugins = {
       # url = "github:hyprwm/hyprland-plugins";
       # inputs.hyprland.follows = "hyprland";
     # };
+    noctalia = {
+      url = "github:noctalia-dev/noctalia";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
   };
 
-  outputs = { self, nixpkgs,nixpkgs-unstable,home-manager,nixvim,vm-curator,polymc, ... }@inputs:
+  outputs = { self, nixpkgs,nixpkgs-unstable,home-manager,nixvim,polymc,noctalia, ... }@inputs:
     let
       system = "x86_64-linux";
 

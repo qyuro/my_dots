@@ -6,6 +6,7 @@
   environment.systemPackages =
   with pkgs; [
   inputs.polymc.packages.${pkgs.stdenv.hostPlatform.system}.default
+  inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
   # polymc
   ###FOR X
   # polybarFull
@@ -29,6 +30,7 @@
   code-cursor
   zed-editor
   ###SOCIETY###
+  discord
   vesktop
   ayugram-desktop
   ###FOR_DESKTOP_AND_JOKES###
@@ -59,6 +61,7 @@
   qbittorrent
   # polymc
   ###FOR_PROGRAMMING###
+  python3
   usbutils
   gnumake
   cmake
@@ -86,7 +89,7 @@
   # nur.repos.trev.helium
   ] ++ (with unstable;[
   quickshell
-  noctalia-shell
+  # noctalia-shell
   ghidra-bin
   gcc
   clang
