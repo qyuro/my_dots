@@ -41,6 +41,7 @@
    ./udisks2.nix
    # ./virtualbox.nix
    # ./wayfire.nix
+   ./docker.nix
    ./xdg.nix
    ./vm-curator.nix
    ./finger.nix

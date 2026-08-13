@@ -5,6 +5,7 @@
     NetworkManager-wait-online.enable = false;  
     # plymouth-quit-wait.enable=false;
     fstrim.enable = true;
+    docker.enable = false;
   };
   
 }

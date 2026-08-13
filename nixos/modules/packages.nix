@@ -37,6 +37,7 @@
   obsidian
   chromium
   # rmpc
+  gparted-full
   p7zip
   hyprpolkitagent
   yazi
