@@ -1,10 +1,16 @@
-{inputs,config,lib,pkgs,unstable, ...}:
+{inputs,config,lib,pkgs,unstable,bitwig-pkgs, ...}:
 {
   nixpkgs.config = {
     allowUnfree = true;
   };
   environment.systemPackages =
   with pkgs; [
+  # bitwig-pkgs.bitwig-studio6
+  (bitwig-pkgs.bitwig-studio6.overrideAttrs (old: {
+    postInstall = (old.postInstall or "") + ''
+      cp ${./bitwig.jar} $out/libexec/bin/bitwig.jar
+    '';
+  }))
   inputs.polymc.packages.${pkgs.stdenv.hostPlatform.system}.default
   inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
   # polymc
@@ -40,6 +46,9 @@
   gparted-full
   p7zip
   hyprpolkitagent
+  hyperfine
+  opencode
+  opencode-desktop
   yazi
   totem
   kitty

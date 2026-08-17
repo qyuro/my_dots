@@ -5,6 +5,7 @@
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
     nixpkgs-old.url = "github:Nixos/nixpkgs/nixos-25.11";
+    bitwig.url = "github:Nixos/nixpkgs/655e3354167d63919a7f376897aa762d45d595e9";
     polymc={
       url = "github:PolyMC/PolyMC";
       inputs.nixpkgs.follows = "nixpkgs-old";
@@ -42,11 +43,15 @@
     };
   };
 
-  outputs = { self, nixpkgs,nixpkgs-unstable,home-manager,nixvim,polymc,noctalia, ... }@inputs:
+  outputs = { self, nixpkgs,nixpkgs-unstable,home-manager,nixvim,polymc,noctalia,bitwig, ... }@inputs:
     let
       system = "x86_64-linux";
 
       unstable = import nixpkgs-unstable {
+        inherit system;
+        config.allowUnfree = true;
+      };
+      bitwig-pkgs = import bitwig {
         inherit system;
         config.allowUnfree = true;
       };
@@ -59,7 +64,7 @@
             # inherit system;
             # config.allowUnfree = true;
             # };
-        inherit unstable inputs system;
+        inherit unstable inputs system bitwig-pkgs;
         #TEST
         # neu = neu-nix;
         # nur = import nur {

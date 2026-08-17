@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "bitwig": {
+      "locked": {
+        "lastModified": 1775538594,
+        "narHash": "sha256-m9klbcJvKjUZTpDnKoj9WD1/6+pkc06yGDyRholF8GU=",
+        "owner": "Nixos",
+        "repo": "nixpkgs",
+        "rev": "655e3354167d63919a7f376897aa762d45d595e9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Nixos",
+        "repo": "nixpkgs",
+        "rev": "655e3354167d63919a7f376897aa762d45d595e9",
+        "type": "github"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -204,6 +220,7 @@
     },
     "root": {
       "inputs": {
+        "bitwig": "bitwig",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "nixpkgs-old": "nixpkgs-old",
