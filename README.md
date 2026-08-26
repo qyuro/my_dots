@@ -30,4 +30,10 @@ sudo nixos-rebuild switch
    git clone https://github.com/qyuro/my_dots
   cd ./my_dots;
   cp /etc/nixos/hardware-configuration.nix ./nixos/hardware-configuration.nix
+```
+  
+dont forget change your username in ./flake.nix and ./nixos/home.nix
+```
   sudo nixos-rebuild switch --flake .#nixos;
+  home-manager switch --flake ./#username 
+```

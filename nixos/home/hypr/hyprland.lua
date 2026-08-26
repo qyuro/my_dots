@@ -27,7 +27,8 @@ hl.monitor({
     output   = "eDP-1",
     mode     = "2880x1800@120.000Hz",
     position = "0x0",
-    scale    = "1.8",
+    -- scale    = "1",
+    scale    = "1.5",
 })
 hl.monitor({
     output   = "HDMI-A-1",
@@ -57,17 +58,9 @@ local menu = "noctalia msg panel-toggle launcher"
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function () 
-  -- hl.exec_cmd("noctalia-shell")
   hl.exec_cmd("noctalia")
-  -- hl.exec_cmd("awww-daemon")
-  -- hl.exec_cmd("hyprctl plugin load /nix/store/dil4f7lm800vlqzwbhv7s9ifgwvk976x-hy3-0.56.0.1/lib/libhy3.so")
---   hl.exec_cmd("waybar & hyprpaper & firefox")
 end)
 
--------------------------------
----- PLUGINS ----
--------------------------------
--- hl.plugin("/nix/store/zwnwfbbvf989wgdhzrr1j752hajyb5pl-hy3-0.55.0/lib/libhy3.so")
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----
 -------------------------------
@@ -75,9 +68,7 @@ end)
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
 
 hl.env("XCURSOR_SIZE", "24")
--- hl.env("XCURSOR_THEME,Bibata-Modern-Ice")
 hl.env("HYPRCURSOR_SIZE", "24")
--- hl.env("HYPRCURSOR_THEME,Bibata-Modern-Ice")
 
 hl.env("QT_QPA_PLATFORM", "wayland;xcb")
 hl.env("SDL_VIDEODRIVER", "wayland,x11")
@@ -332,7 +323,8 @@ hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
 for i = 1, 10 do
     local key = i % 10 -- 10 maps to key 0
-    hl.bind(mainMod .. " + " .. key,             hl.dsp.focus({ workspace = i}))
+    hl.bind(mainMod .. " + " .. key,             hl.dsp.focus({ workspace = i }))
+    -- hl.bind(mainMod .. " + SHIFT + " .. key,     hy3.move_to_workspace(tostring(i),{follow = true,warp = true}))
     hl.bind(mainMod .. " + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }))
 end
 

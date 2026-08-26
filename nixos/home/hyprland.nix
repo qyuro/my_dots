@@ -1,13 +1,14 @@
-{unstable,pkgs,config,lib, ...}:
+{pkgs,config,lib, ...}:
 {
   wayland.windowManager.hyprland = {
     enable = true;
-    package = unstable.pkgs.hyprland;
+    # package = pkgs.hyprland;
     configType = "lua";
     # extraConfig = builtins.readFile ./hypr/hyprland.lua;
     extraConfig = ''
     hl.on("hyprland.start", function ()
-      hl.exec_cmd("hyprctl plugin load ${unstable.pkgs.hyprlandPlugins.hy3}/lib/libhy3.so")
+      hl.exec_cmd("${pkgs.hyprpolkitagent}/libexec/hyprpolkitagent")
+      hl.exec_cmd("hyprctl plugin load ${pkgs.hyprlandPlugins.hy3}/lib/libhy3.so")
     end)
     ${builtins.readFile ./hypr/hyprland.lua}
     '';
@@ -16,7 +17,7 @@
        # unstable.pkgs.hyprlandPlugins.hy3
     # ];
     xwayland.enable = true;
-    portalPackage = unstable.pkgs.xdg-desktop-portal-hyprland;
+    # portalPackage = pkgs.xdg-desktop-portal-hyprland;
   };
-    # xdg.configFile."hypr/hyprland.lua".source = ./hypr/hyprland.lua;
+
 }

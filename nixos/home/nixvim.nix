@@ -8,7 +8,8 @@
     vimAlias = true;
 
     colorschemes = {
-      gruvbox-material-nvim.enable = true;
+      modus.enable = true;
+      # gruvbox-material-nvim.enable = true;
     };
 
     opts = {

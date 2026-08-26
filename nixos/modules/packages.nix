@@ -13,9 +13,12 @@
   }))
   inputs.polymc.packages.${pkgs.stdenv.hostPlatform.system}.default
   inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+  # inputs.nina.packages.${pkgs.stdenv.hostPlatform.system}.default
   # polymc
   ###FOR X
   # polybarFull
+  # hyprpolkitagent
+  # hyprtoolkit
   faugus-launcher
   ###TONELIB
   tonelib-gfx
@@ -30,6 +33,7 @@
   emacsPackages.vterm
   ripgrep
   ### FOR PENTEST
+  wireshark
   nmap
   ###WRITERS##
   helix
@@ -40,7 +44,7 @@
   vesktop
   ayugram-desktop
   ###FOR_DESKTOP_AND_JOKES###
-  obsidian
+  # obsidian
   chromium
   # rmpc
   gparted-full
@@ -48,9 +52,10 @@
   hyprpolkitagent
   hyperfine
   opencode
-  opencode-desktop
   yazi
+  qpwgraph
   totem
+  rio
   kitty
   xwayland
   nvtopPackages.full

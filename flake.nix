@@ -41,6 +41,10 @@
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+    # nina = {
+      # url = "https://kepr.uk/nina";
+      # inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
 
   outputs = { self, nixpkgs,nixpkgs-unstable,home-manager,nixvim,polymc,noctalia,bitwig, ... }@inputs:

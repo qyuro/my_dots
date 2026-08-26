@@ -1,19 +1,17 @@
-{unstable,pkgs,config, ...}:
+{pkgs,config, ...}:
 {
   programs.hyprland={
     enable = true;
-    package = unstable.pkgs.hyprland;
-    portalPackage = unstable.pkgs.xdg-desktop-portal-hyprland;
-    # package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-    # portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+    # package = pkgs.hyprland;
+    # portalPackage = pkgs.xdg-desktop-portal-hyprland;
     xwayland.enable = true;
     withUWSM = false;
   };
   # xdg.portal = {
-  #   enable = true;
-  #   extraPortals = with unstable.pkgs; [
-  #     unstable.xdg-desktop-portal-hyprland
-  #   ];
+    # enable = true;
+    # extraPortals = with unstable.pkgs; [
+      # xdg-desktop-portal-hyprland
+    # ];
   # };
     environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";

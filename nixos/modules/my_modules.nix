@@ -49,6 +49,7 @@
    # ./kde.nix
    # ./nixvim.nix
    # ./mango.nix
+   ./wireshark.nix
    # ./tor.nix
  ];
 }
