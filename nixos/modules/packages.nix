@@ -86,7 +86,7 @@
   gore
   multimarkdown
   nixfmt
-  #ida-free
+  ida-free
   ###TYPST###
   # typstwriter
   # typst-live
