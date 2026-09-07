@@ -78,6 +78,8 @@ hl.env("CLUTTER_BACKEND", "wayland")
 hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
 hl.env("XDG_SESSION_TYPE", "wayland")
 hl.env("XDG_SESSION_DESKTOP", "Hyprland")
+-- TEST PIPEWIRE
+hl.env("LD_LIBRARY_PATH","/run/current-system/sw/lib/pipewire")
 -----------------------
 ----- PERMISSIONS -----
 -----------------------
@@ -281,7 +283,7 @@ hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
 local closeWindowBind = hl.bind(mainMod .. " + Q", hy3.kill_active())
 
 -- closeWindowBind:set_enabled(false)
-hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+-- hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + X", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("pkill .quickshell-wra;noctalia-shell"))

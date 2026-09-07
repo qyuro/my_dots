@@ -21,12 +21,15 @@
   # hyprtoolkit
   faugus-launcher
   ###TONELIB
+  guitarix
+  guitarix-vst
+  neural-amp-modeler-lv2
   tonelib-gfx
   ###for sway
   hyprshot
   # grim
   ###EMACS
-  emacs-gtk
+  emacs-pgtk
   fd
   shellcheck
   # symbola
@@ -74,9 +77,16 @@
   # osu-lazer-bin
   # opentabletdriver
   qbittorrent
-  # polymc
   ###FOR_PROGRAMMING###
+  ###FOR WAILS
+  webkitgtk_4_1
+  webkitgtk_6_0
+  gtk3
+  nsis
+  upx
+
   python3
+  nodejs_26
   usbutils
   gnumake
   cmake
@@ -111,7 +121,9 @@
   fasm
   uv
   go
+  wails
   protonup-qt
+  obsidian
   fastfetch
   ]);
 }

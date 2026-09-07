@@ -50,6 +50,8 @@
    # ./nixvim.nix
    # ./mango.nix
    ./wireshark.nix
+   # ./jack.nix
    # ./tor.nix
+   ./pam.nix
  ];
 }
