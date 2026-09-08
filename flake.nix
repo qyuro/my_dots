@@ -41,13 +41,17 @@
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+    ghostty = {
+      url = "github:ghostty-org/ghostty";
+      inputs.nixpkgs.follows ="nixpkgs";
+    };
     # nina = {
       # url = "https://kepr.uk/nina";
       # inputs.nixpkgs.follows = "nixpkgs";
     # };
   };
 
-  outputs = { self, nixpkgs,nixpkgs-unstable,home-manager,nixvim,polymc,noctalia,bitwig, ... }@inputs:
+  outputs = { self, nixpkgs,nixpkgs-unstable,home-manager,nixvim,polymc,noctalia,bitwig,ghostty, ... }@inputs:
     let
       system = "x86_64-linux";
 

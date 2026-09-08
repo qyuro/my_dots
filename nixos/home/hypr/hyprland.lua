@@ -43,7 +43,7 @@ hl.monitor({
 ---------------------
 
 -- Set programs that you use
-local terminal    = "kitty"
+local terminal    = "ghostty"
 local fileManager = "nautilus"
 -- local menu        = "noctalia-shell ipc call launcher toggle"
 local menu = "noctalia msg panel-toggle launcher"

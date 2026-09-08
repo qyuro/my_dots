@@ -13,6 +13,7 @@
   }))
   inputs.polymc.packages.${pkgs.stdenv.hostPlatform.system}.default
   inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+  inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
   # inputs.nina.packages.${pkgs.stdenv.hostPlatform.system}.default
   # polymc
   ###FOR X
@@ -32,9 +33,16 @@
   emacs-pgtk
   fd
   shellcheck
-  # symbola
-  emacsPackages.vterm
+  isync
+  # emacsPackages.mbsync
+  emacsPackages.mu4e
+  mu
+  # emacsPackages.vterm
   ripgrep
+  shfmt
+  html-tidy
+  stylelint
+  js-beautify
   ### FOR PENTEST
   wireshark
   nmap
@@ -86,6 +94,7 @@
   upx
 
   python3
+  postman
   nodejs_26
   usbutils
   gnumake
@@ -124,6 +133,7 @@
   wails
   protonup-qt
   obsidian
+  zig
   fastfetch
   ]);
 }
