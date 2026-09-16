@@ -15,7 +15,11 @@
   inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
   inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
   # inputs.nina.packages.${pkgs.stdenv.hostPlatform.system}.default
-  # polymc
+  ###WINE
+  wineWow64Packages.staging
+  winetricks
+  yabridge
+  yabridgectl
   ###FOR X
   # polybarFull
   # hyprpolkitagent
@@ -37,6 +41,7 @@
   # emacsPackages.mbsync
   emacsPackages.mu4e
   mu
+  imagemagick
   # emacsPackages.vterm
   ripgrep
   shfmt
@@ -56,6 +61,7 @@
   ayugram-desktop
   ###FOR_DESKTOP_AND_JOKES###
   # obsidian
+  ventoy-full-gtk
   chromium
   # rmpc
   gparted-full
@@ -102,6 +108,7 @@
   gopls
   gomodifytags
   gotests
+  subversion
   gore
   multimarkdown
   nixfmt

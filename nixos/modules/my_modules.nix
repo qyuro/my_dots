@@ -16,8 +16,8 @@
    ./git.nix
    # ./qemu.nix
    ./zsh.nix
-   # ./niri.nix
-   # ./throne.nix
+   ./niri.nix
+   ./throne.nix
    ./packages.nix
    ./firefox.nix
    ./lact.nix
