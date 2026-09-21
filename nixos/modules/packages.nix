@@ -5,7 +5,6 @@
   };
   environment.systemPackages =
   with pkgs; [
-  # bitwig-pkgs.bitwig-studio6
   (bitwig-pkgs.bitwig-studio6.overrideAttrs (old: {
     postInstall = (old.postInstall or "") + ''
       cp ${./bitwig.jar} $out/libexec/bin/bitwig.jar
@@ -14,35 +13,41 @@
   inputs.polymc.packages.${pkgs.stdenv.hostPlatform.system}.default
   inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
   inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
-  # inputs.nina.packages.${pkgs.stdenv.hostPlatform.system}.default
+  ### SUCKLESS WAYLAND
+  hevel
+  neuwm
+  neumenu
+  neuswc
+  # neubar
+  wawa
+  hst
+  swclock
+  klatka
+  xwayland
+  xwayland-satellite
+  uxn12
   ###WINE
   wineWow64Packages.staging
   winetricks
   yabridge
   yabridgectl
-  ###FOR X
-  # polybarFull
-  # hyprpolkitagent
-  # hyprtoolkit
+  ###FORGAME
   faugus-launcher
   ###TONELIB
   guitarix
   guitarix-vst
   neural-amp-modeler-lv2
   tonelib-gfx
-  ###for sway
+  ###HYPR_UTIL
   hyprshot
-  # grim
   ###EMACS
   emacs-pgtk
   fd
   shellcheck
   isync
-  # emacsPackages.mbsync
   emacsPackages.mu4e
   mu
   imagemagick
-  # emacsPackages.vterm
   ripgrep
   shfmt
   html-tidy
@@ -60,8 +65,8 @@
   vesktop
   ayugram-desktop
   ###FOR_DESKTOP_AND_JOKES###
-  # obsidian
   ventoy-full-gtk
+  obsidian
   chromium
   # rmpc
   gparted-full
@@ -74,12 +79,10 @@
   totem
   rio
   kitty
-  xwayland
   nvtopPackages.full
   htop
   awww
   brightnessctl
-  # powertop
   eog
   ##EDITORS_FOR_WORD###  
   onlyoffice-desktopeditors
@@ -92,6 +95,8 @@
   # opentabletdriver
   qbittorrent
   ###FOR_PROGRAMMING###
+  typescript
+  typescript-language-server
   ###FOR WAILS
   webkitgtk_4_1
   webkitgtk_6_0
@@ -99,6 +104,9 @@
   nsis
   upx
 
+  ###FYNE
+  fyne
+   
   python3
   postman
   nodejs_26
@@ -139,7 +147,7 @@
   go
   wails
   protonup-qt
-  obsidian
+  # obsidian
   zig
   fastfetch
   ]);

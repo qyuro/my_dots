@@ -6,5 +6,7 @@
    ./rmpc.nix
    ./hyprland.nix
    ./nixvim.nix
+   ./obsidian.nix
+   ./gtk-icons.nix
  ];
 }

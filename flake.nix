@@ -18,10 +18,10 @@
       # url = "github:nix-community/NUR";
       # inputs.nixpkgs.follows = "nixpkgs";
     # };
-    # neu-nix = {
-      # url = "github:ricardomaps/neu-nix";
-      # inputs.nixpkgs.follows="nixpkgs";
-    # };
+    neu-nix = {
+      url = "github:ricardomaps/neu-nix";
+      inputs.nixpkgs.follows="nixpkgs";
+    };
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -51,7 +51,7 @@
     # };
   };
 
-  outputs = { self, nixpkgs,nixpkgs-unstable,home-manager,nixvim,polymc,noctalia,bitwig,ghostty, ... }@inputs:
+  outputs = { self, nixpkgs,nixpkgs-unstable,home-manager,nixvim,polymc,noctalia,bitwig,ghostty,neu-nix, ... }@inputs:
     let
       system = "x86_64-linux";
 
@@ -74,7 +74,7 @@
             # };
         inherit unstable inputs system bitwig-pkgs;
         #TEST
-        # neu = neu-nix;
+        neu = neu-nix;
         # nur = import nur {
           # nurpkgs = nixpkgs;
           # inherit system;
@@ -86,7 +86,7 @@
           nixpkgs.overlays = [
               polymc.overlay
               # nur.overlays.default
-              # neu-nix.overlays.default
+              neu-nix.overlays.default
             ];
           }
           ./nixos/configuration.nix

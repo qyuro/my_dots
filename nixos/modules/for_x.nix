@@ -24,12 +24,12 @@
       windowManager.i3 = {
         enable = true;  
       };
-      windowManager.dwm= {
-        enable = true;
-        package = pkgs.dwm.overrideAttrs {
-            src = ./dwm;
-        };
-      };
+      # windowManager.dwm= {
+        # enable = true;
+        # package = pkgs.dwm.overrideAttrs {
+            # src = ./dwm;
+        # };
+      # };
     };
     # services.displayManager= {
         # sddm.enable = true;

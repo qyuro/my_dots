@@ -152,6 +152,26 @@
         "type": "github"
       }
     },
+    "neu-nix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1788753553,
+        "narHash": "sha256-KxEzNf6u0Wp61Kyv2PAnCCvPOX326CL7b+8gyU6lN1A=",
+        "owner": "ricardomaps",
+        "repo": "neu-nix",
+        "rev": "51b7fde05d1704eadd6593f2b738e0f43383e7f0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ricardomaps",
+        "repo": "neu-nix",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1789344334,
@@ -285,6 +305,7 @@
         "bitwig": "bitwig",
         "ghostty": "ghostty",
         "home-manager": "home-manager_2",
+        "neu-nix": "neu-nix",
         "nixpkgs": "nixpkgs",
         "nixpkgs-old": "nixpkgs-old",
         "nixpkgs-unstable": "nixpkgs-unstable",

@@ -7,6 +7,8 @@
     fstrim.enable = true;
     #TEST FOR NOT AUTO_START
     docker.wantedBy = pkgs.lib.mkForce [];
+    libvirtd.wantedBy = pkgs.lib.mkForce [];
+    bluetooth.wantedBy = pkgs.lib.mkForce [];
   };
   
 }
