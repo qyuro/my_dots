@@ -14,15 +14,15 @@
   inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
   inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
   ### SUCKLESS WAYLAND
-  hevel
-  neuwm
-  neumenu
-  neuswc
+  # hevel
+  # neuwm
+  # neumenu
+  # neuswc
   # neubar
-  wawa
-  hst
-  swclock
-  klatka
+  # wawa
+  # hst
+  # swclock
+  # klatka
   xwayland
   xwayland-satellite
   uxn12
@@ -120,7 +120,7 @@
   gore
   multimarkdown
   nixfmt
-  ida-free
+  # ida-free
   ###TYPST###
   # typstwriter
   # typst-live
