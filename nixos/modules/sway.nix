@@ -6,7 +6,7 @@
       gtk = true;
       base = true;
     };
-    # package = pkgs.swayfx;
+    package = pkgs.swayfx;
     xwayland.enable = true;
   }; 
   xdg.portal = {

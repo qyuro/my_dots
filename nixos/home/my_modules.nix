@@ -8,5 +8,6 @@
    ./nixvim.nix
    ./obsidian.nix
    ./gtk-icons.nix
+   ./git.nix
  ];
 }

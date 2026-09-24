@@ -3,6 +3,7 @@
  imports = [
    ./boot.nix
    ./amd.nix
+   # ./autologin.nix
    # ./resolved.nix
    ./kernel.nix
    ./network.nix
@@ -52,6 +53,8 @@
    ./wireshark.nix
    # ./jack.nix
    # ./tor.nix
+   ./nh.nix
+   ./env.nix
    ./pam.nix
  ];
 }

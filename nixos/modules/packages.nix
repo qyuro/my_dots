@@ -5,27 +5,15 @@
   };
   environment.systemPackages =
   with pkgs; [
-  (bitwig-pkgs.bitwig-studio6.overrideAttrs (old: {
-    postInstall = (old.postInstall or "") + ''
-      cp ${./bitwig.jar} $out/libexec/bin/bitwig.jar
-    '';
-  }))
+  # (bitwig-pkgs.bitwig-studio6.overrideAttrs (old: {
+    # postInstall = (old.postInstall or "") + ''
+      # cp ${./bitwig.jar} $out/libexec/bin/bitwig.jar
+    # '';
+  # }))
   inputs.polymc.packages.${pkgs.stdenv.hostPlatform.system}.default
   inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
   inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
-  ### SUCKLESS WAYLAND
-  # hevel
-  # neuwm
-  # neumenu
-  # neuswc
-  # neubar
-  # wawa
-  # hst
-  # swclock
-  # klatka
-  xwayland
   xwayland-satellite
-  uxn12
   ###WINE
   wineWow64Packages.staging
   winetricks
@@ -36,8 +24,6 @@
   ###TONELIB
   guitarix
   guitarix-vst
-  neural-amp-modeler-lv2
-  tonelib-gfx
   ###HYPR_UTIL
   hyprshot
   ###EMACS
@@ -56,12 +42,8 @@
   ### FOR PENTEST
   wireshark
   nmap
-  ###WRITERS##
-  helix
-  code-cursor
-  zed-editor
   ###SOCIETY###
-  discord
+  # discord
   vesktop
   ayugram-desktop
   ###FOR_DESKTOP_AND_JOKES###
@@ -85,9 +67,8 @@
   brightnessctl
   eog
   ##EDITORS_FOR_WORD###  
+  helix
   onlyoffice-desktopeditors
-  ###RUSSIAN PRIKOL
-  # zapret
   ###JUST_NAUTILIUS###
   nautilus
   ###GAMES###
@@ -97,6 +78,8 @@
   ###FOR_PROGRAMMING###
   typescript
   typescript-language-server
+  ###FOR RUST
+  dioxus-cli
   ###FOR WAILS
   webkitgtk_4_1
   webkitgtk_6_0
