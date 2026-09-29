@@ -1,4 +1,4 @@
-{config,lib,pkgs,unstable, ...}:
+{ unstable, ... }:
 {
   programs.mangowc = {
     enable = true;

@@ -1,60 +1,60 @@
-{config,lib,pkgs, ...} :
 {
- imports = [
-   ./boot.nix
-   ./amd.nix
-   # ./autologin.nix
-   # ./resolved.nix
-   ./kernel.nix
-   ./network.nix
-   ./timezone.nix
-   ./gamemode.nix
-   # ./opentablet.nix
-   ./steam.nix
-   ./locale.nix
-   # ./for_x.nix
-   ./pipewire.nix
-   ./git.nix
-   # ./qemu.nix
-   ./zsh.nix
-   ./niri.nix
-   ./throne.nix
-   ./packages.nix
-   ./firefox.nix
-   ./lact.nix
-   ./tuned.nix
-   # ./power-profiles-daemon.nix
-   ./user.nix
-   # ./gnome.nix
-   ./displaymanager.nix
-   ./bluetooth.nix
-   # ./ollama.nix
-   ./services.nix
-   #TEST HAPP
-   ./happ-module.nix
-   ./test-happ.nix
-   # ./hyprland.nix
-   ./nixld.nix
-   # ./sway.nix
-   ./obs.nix
-   ./rtkit.nix
-   ./fonts.nix
-   ./udisks2.nix
-   # ./virtualbox.nix
-   # ./wayfire.nix
-   ./docker.nix
-   ./xdg.nix
-   ./vm-curator.nix
-   # ./finger.nix
-   # ./river.nix
-   # ./kde.nix
-   # ./nixvim.nix
-   # ./mango.nix
-   ./wireshark.nix
-   # ./jack.nix
-   # ./tor.nix
-   ./nh.nix
-   ./env.nix
-   ./pam.nix
- ];
+  imports = [
+    ./boot.nix
+    ./amd.nix
+    # ./autologin.nix
+    # ./resolved.nix
+    ./kernel.nix
+    ./network.nix
+    ./timezone.nix
+    ./gamemode.nix
+    # ./opentablet.nix
+    ./steam.nix
+    ./locale.nix
+    # ./for_x.nix
+    ./pipewire.nix
+    ./git.nix
+    ./qemu.nix
+    ./zsh.nix
+    ./niri.nix
+    ./throne.nix
+    ./packages.nix
+    ./firefox.nix
+    ./lact.nix
+    ./tuned.nix
+    # ./power-profiles-daemon.nix
+    ./user.nix
+    # ./gnome.nix
+    ./displaymanager.nix
+    ./bluetooth.nix
+    # ./ollama.nix
+    ./services.nix
+    #TEST HAPP
+    ./happ-module.nix
+    ./test-happ.nix
+    # ./hyprland.nix
+    ./nixld.nix
+    # ./sway.nix
+    ./obs.nix
+    ./rtkit.nix
+    ./fonts.nix
+    ./udisks2.nix
+    # ./virtualbox.nix
+    # ./wayfire.nix
+    ./docker.nix
+    ./xdg.nix
+    # ./vm-curator.nix
+    # ./finger.nix
+    # ./river.nix
+    # ./kde.nix
+    # ./nixvim.nix
+    # ./mango.nix
+    ./wireshark.nix
+    # ./jack.nix
+    # ./tor.nix
+    ./nh.nix
+    ./env.nix
+    ./pam.nix
+    # ./lazygit.nix
+  ];
 }

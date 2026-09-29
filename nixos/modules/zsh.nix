@@ -10,7 +10,7 @@
   ohMyZsh = {
     enable = true;
     plugins = ["git" "sudo"];
-    theme = "robbyrussell"; 
+    theme = "smt"; 
     };
   };
 

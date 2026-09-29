@@ -1,4 +1,4 @@
-{pkgs,config, ...}:
+{ pkgs, ... }:
 {
   programs.river-classic = {
     enable = true;

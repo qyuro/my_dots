@@ -1,8 +1,20 @@
-{config,pkgs,lib,...}:
-
 {
-  users.users.hxteher= {
-     isNormalUser = true;
-     extraGroups = [ "wheel" "networkmanager" "audio" "video" "storage" "libvirtd" "users" "input" "gamemode" "power" "plugdev" "docker" "jackaudio"]; 
+  users.users.hxteher = {
+    isNormalUser = true;
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+      "audio"
+      "video"
+      "storage"
+      "libvirtd"
+      "users"
+      "input"
+      "gamemode"
+      "power"
+      "plugdev"
+      "docker"
+      "jackaudio"
+    ];
   };
 }

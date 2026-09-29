@@ -1,6 +1,6 @@
-{ config, pkgs, lib, ... }:
+{ pkgs, ... }:
 {
-  programs.sway= {
+  programs.sway = {
     enable = true;
     wrapperFeatures = {
       gtk = true;
@@ -8,10 +8,10 @@
     };
     package = pkgs.swayfx;
     xwayland.enable = true;
-  }; 
+  };
   xdg.portal = {
     enable = true;
-    wlr= {
+    wlr = {
       enable = true;
       settings = {
         screencast = {
@@ -22,7 +22,7 @@
           chooser_type = "simple";
           chooser_cmd = "${pkgs.slurp}/bin/slurp -f 'Monitor: %o' -or";
           # chooser_type = "default";
-          # chooser_cmd = "${pkgs.wofi}/bin/wofi --show drun" ;  
+          # chooser_cmd = "${pkgs.wofi}/bin/wofi --show drun" ;
         };
       };
     };
