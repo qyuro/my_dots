@@ -6,21 +6,21 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
     nixpkgs-old.url = "github:Nixos/nixpkgs/nixos-25.11";
     bitwig.url = "github:Nixos/nixpkgs/655e3354167d63919a7f376897aa762d45d595e9";
-    polymc={
+    polymc = {
       url = "github:PolyMC/PolyMC";
       inputs.nixpkgs.follows = "nixpkgs-old";
     };
     # fenix={
-      # url = "github:nix-community/fenix";
-      # inputs.nixpkgs.follows = "nixpkgs";
+    # url = "github:nix-community/fenix";
+    # inputs.nixpkgs.follows = "nixpkgs";
     # };
     # nur = {
-      # url = "github:nix-community/NUR";
-      # inputs.nixpkgs.follows = "nixpkgs";
+    # url = "github:nix-community/NUR";
+    # inputs.nixpkgs.follows = "nixpkgs";
     # };
     neu-nix = {
       url = "github:ricardomaps/neu-nix";
-      inputs.nixpkgs.follows="nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
@@ -31,11 +31,21 @@
       # url = "github:nix-community/nixvim/nixos-26.05";
       # inputs.nixpkgs.follows = "nixpkgs";
     };
+    umbriel = {
+      url = "github:noctalia-dev/umbriel";
+    };
+    tele = {
+      url = "github:sorokin-vladimir/tele";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+    # niri = {
+      # url = "github:sodiboo/niri-flake";
+    # };
     # vm-curator.url = "github:mroboff/vm-curator";
     # hyprland.url = "github:hyprwm/Hyprland";
     # hyprland-plugins = {
-      # url = "github:hyprwm/hyprland-plugins";
-      # inputs.hyprland.follows = "hyprland";
+    # url = "github:hyprwm/hyprland-plugins";
+    # inputs.hyprland.follows = "hyprland";
     # };
     noctalia = {
       url = "github:noctalia-dev/noctalia";
@@ -43,15 +53,36 @@
     };
     ghostty = {
       url = "github:ghostty-org/ghostty";
-      inputs.nixpkgs.follows ="nixpkgs";
-    };
-    # nina = {
-      # url = "https://kepr.uk/nina";
       # inputs.nixpkgs.follows = "nixpkgs";
+    };
+    fetch.url = "github:areofyl/fetch";
+    helix.url = "github:helix-editor/helix";
+    # xwayland-satellite.url = "github:Supreeeme/xwayland-satellite";
+    # nina = {
+    # url = "https://kepr.uk/nina";
+    # inputs.nixpkgs.follows = "nixpkgs";
     # };
   };
 
-  outputs = { self, nixpkgs,nixpkgs-unstable,home-manager,nixvim,polymc,noctalia,bitwig,ghostty,neu-nix, ... }@inputs:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      nixpkgs-unstable,
+      home-manager,
+      nixvim,
+      polymc,
+      noctalia,
+      bitwig,
+      ghostty,
+      neu-nix,
+      # niri,
+      fetch,
+      helix,
+      umbriel,
+      # xwayland-satellite,
+      ...
+    }@inputs:
     let
       system = "x86_64-linux";
 
@@ -64,45 +95,52 @@
         config.allowUnfree = true;
       };
       # rustToolchain = fenix.packages.${system}.stable.toolchain;
-    in {
-     # nixos - system hostname
+    in
+    {
+      # nixos - system hostname
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         specialArgs = {
           # unstable = import nixpkgs-unstable {
-            # inherit system;
-            # config.allowUnfree = true;
-            # };
-        inherit unstable inputs system bitwig-pkgs;
-        #TEST
-        neu = neu-nix;
-        # nur = import nur {
+          # inherit system;
+          # config.allowUnfree = true;
+          # };
+          inherit
+            unstable
+            inputs
+            system
+            bitwig-pkgs
+            ;
+          #TEST
+          neu = neu-nix;
+          # nur = import nur {
           # nurpkgs = nixpkgs;
           # inherit system;
           # };
         };
-        
+
         modules = [
           {
-          nixpkgs.overlays = [
+            nixpkgs.overlays = [
               polymc.overlay
               # nur.overlays.default
               neu-nix.overlays.default
             ];
           }
+          # niri.nixosModules.niri
           ./nixos/configuration.nix
-        ];   
+        ];
       };
-      homeConfigurations.hxteher= home-manager.lib.homeManagerConfiguration {
+      homeConfigurations.hxteher = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
         extraSpecialArgs = {
           inherit unstable inputs;
 
           # unstable = import nixpkgs-unstable {
-            # inherit system;
-            # config.allowUnfree = true;
+          # inherit system;
+          # config.allowUnfree = true;
           # };
         };
-        
+
         modules = [
           ./nixos/home.nix
           nixvim.homeModules.nixvim

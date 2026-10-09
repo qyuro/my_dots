@@ -20,9 +20,9 @@
       providers.wl-copy.enable = true;
     };
     opts = {
-      tabstop = 3;
-      shiftwidth = 3;
-      softtabstop = 3;
+      tabstop = 2;
+      shiftwidth = 2;
+      softtabstop = 2;
       expandtab = true;
       number = true;
       relativenumber = true;
@@ -46,7 +46,7 @@
             __raw = ''
               cmp.mapping.preset.insert({
                  ['<C-Space>'] = cmp.mapping.complete(),
-                 ['<CR>'] = cmp.mapping.confirm({ select = true }),
+                 ['<CR>'] = cmp.mapping.confirm({ select = false }),
                  ['<C-e>'] = cmp.mapping.abort(),
                  ['<Tab>'] = cmp.mapping.select_next_item(),
                  ['<S-Tab>'] = cmp.mapping.select_prev_item(),
@@ -74,6 +74,13 @@
       gitsigns.enable = true;
       web-devicons.enable = true;
       toggleterm.enable = true;
+    };
+    performance.byteCompileLua = {
+      enable = true;
+      plugins = true;
+      nvimRuntime = true;
+      configs = true;
+      initLua = true;
     };
   };
   home.packages = with pkgs; [

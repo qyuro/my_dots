@@ -1,11 +1,13 @@
-{ pkgs, ... }:
+{ pkgs,unstable,... }:
 {
   xdg.portal = {
     enable = true;
-    extraPortals = [
-      pkgs.xdg-desktop-portal-hyprland
-      pkgs.xdg-desktop-portal-gnome
-      pkgs.xdg-desktop-portal-gtk
+    extraPortals = with pkgs; [
+      # pkgs.xdg-desktop-portal-hyprland
+      xdg-desktop-portal-wlr
+      # xdg-desktop-portal-gnome
+      # xdg-desktop-portal-gtk
+    # ] ++ unstable.xdg-desktop-portal-umbriel;
     ];
   };
 }

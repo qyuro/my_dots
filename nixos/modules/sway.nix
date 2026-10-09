@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs,unstable, ... }:
 {
   programs.sway = {
     enable = true;
@@ -6,7 +6,7 @@
       gtk = true;
       base = true;
     };
-    package = pkgs.swayfx;
+    package = unstable.swayfx;
     xwayland.enable = true;
   };
   xdg.portal = {

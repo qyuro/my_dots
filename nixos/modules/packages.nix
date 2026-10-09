@@ -17,10 +17,42 @@
           cp ${./bitwig.jar} $out/libexec/bin/bitwig.jar
         '';
       }))
+      ###FOR_SWAY
+      swayosd
+      swaylock
+      tofi
+      fuzzel
+      # wmenu
+      ironbar
+      yambar
+      # swayimg
+      swaynotificationcenter
+      ###
+      inputs.helix.packages.${pkgs.stdenv.hostPlatform.system}.default
+      xwayland-satellite
+      ###for helix
+      #FOR_GO
+      gopls
+      golangci-lint-langserver
+      golangci-lint
+      gomodifytags
+      gotests
+      #FOR_C
+      clang-tools
+      #FOR_PY
+      ruff
+      ty
+      python313Packages.jedi-language-server
+      python313Packages.python-lsp-server
+      zuban
+
+      inputs.tele.packages.${pkgs.system}.default
+      inputs.fetch.packages.${pkgs.stdenv.hostPlatform.system}.default
       inputs.polymc.packages.${pkgs.stdenv.hostPlatform.system}.default
       inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
       inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
-      xwayland-satellite
+      #TEST XMPP
+      gajim
       ###WINE
       wineWow64Packages.staging
       winetricks
@@ -32,27 +64,23 @@
       guitarix
       guitarix-vst
       ###HYPR_UTIL
-      hyprshot
+      # hyprshot
       ###EMACS
-      emacs-pgtk
-      emacsPackages.vterm
-      fd
-      shellcheck
-      isync
-      emacsPackages.mu4e
-      mu
-      imagemagick
-      ripgrep
-      shfmt
-      html-tidy
-      stylelint
-      js-beautify
-      black
+      # emacs-pgtk
+      # emacsPackages.vterm
+      # fd
+      # shellcheck
+      # isync
+      # emacsPackages.mu4e
+      # mu
+      # imagemagick
+      # ripgrep
+      # shfmt
+      # html-tidy
+      # stylelint
+      # js-beautify
+      # black
       pipenv
-      # noseyparker
-      # nose2pytest
-      # python313Packages.nose2pytest
-      # python313Packages.nose2
       python313Packages.pytest
       # emacsPackages.pytest
       ### FOR PENTEST
@@ -63,10 +91,10 @@
       # vesktop
       ayugram-desktop
       ###FOR_DESKTOP_AND_JOKES###
-      gitui
       ventoy-full-gtk
       obsidian
       chromium
+      kdePackages.filelight
       # rmpc
       gparted-full
       p7zip
@@ -74,17 +102,19 @@
       hyperfine
       opencode
       yazi
+      duf
       qpwgraph
       totem
-      rio
+      # rio
       kitty
       nvtopPackages.full
+      mangohud
       htop
       awww
       brightnessctl
       eog
       ##EDITORS_FOR_WORD###
-      helix
+      # helix
       onlyoffice-desktopeditors
       ###JUST_NAUTILIUS###
       nautilus
@@ -96,6 +126,7 @@
       typescript
       typescript-language-server
       ###FOR RUST
+      rustup
       #for dx
       # androidsdk
       # android-tools
@@ -119,9 +150,6 @@
       usbutils
       gnumake
       cmake
-      gopls
-      gomodifytags
-      gotests
       subversion
       gore
       multimarkdown
@@ -132,13 +160,9 @@
       # typst-live
       # typst
       # typstyle
-      #tor
+      # tor
       # tor-browser
       # torsocks
-      # TEST THIS FROM AMPRESNAD  GPU stuff
-      # amdvlk
-      # rocm-opencl-icd
-      # glaxnimate
       # TRY FROM NUR
       # nur.repos.hythera.waterfox-bin
       # nur.repos.trev.helium
@@ -157,6 +181,7 @@
       # obsidian
       zig
       fastfetch
+      # xwayland-satellite
       dioxus-cli
     ]);
 }

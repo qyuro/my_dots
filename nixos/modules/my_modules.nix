@@ -2,6 +2,8 @@
   imports = [
     ./boot.nix
     ./amd.nix
+    ./console.nix
+    ./openssh.nix
     # ./autologin.nix
     # ./resolved.nix
     ./kernel.nix
@@ -22,22 +24,24 @@
     ./firefox.nix
     ./lact.nix
     ./tuned.nix
+    ./kdeconnect.nix
     # ./power-profiles-daemon.nix
     ./user.nix
     # ./gnome.nix
     ./displaymanager.nix
     ./bluetooth.nix
-    # ./ollama.nix
+    ./ollama.nix
     ./services.nix
     #TEST HAPP
     ./happ-module.nix
     ./test-happ.nix
     # ./hyprland.nix
     ./nixld.nix
-    # ./sway.nix
+    ./sway.nix
     ./obs.nix
     ./rtkit.nix
     ./fonts.nix
+    ./waybar.nix
     ./udisks2.nix
     # ./virtualbox.nix
     # ./wayfire.nix
@@ -48,13 +52,15 @@
     # ./river.nix
     # ./kde.nix
     # ./nixvim.nix
+    # ./dwl.nix
     # ./mango.nix
     ./wireshark.nix
+    # ./umbriel.nix
     # ./jack.nix
     # ./tor.nix
     ./nh.nix
     ./env.nix
     ./pam.nix
-    # ./lazygit.nix
+    ./lazygit.nix
   ];
 }
