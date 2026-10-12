@@ -2,7 +2,7 @@
   imports = [
     ./boot.nix
     ./amd.nix
-    ./console.nix
+    # ./console.nix
     ./openssh.nix
     # ./autologin.nix
     # ./resolved.nix
@@ -41,7 +41,7 @@
     ./obs.nix
     ./rtkit.nix
     ./fonts.nix
-    ./waybar.nix
+    # ./waybar.nix
     ./udisks2.nix
     # ./virtualbox.nix
     # ./wayfire.nix

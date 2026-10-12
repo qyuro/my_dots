@@ -46,7 +46,7 @@
       python313Packages.python-lsp-server
       zuban
 
-      inputs.tele.packages.${pkgs.stdenv.hostPlatform}.default
+      inputs.tele.packages.${pkgs.stdenv.hostPlatform.system}.default
       inputs.fetch.packages.${pkgs.stdenv.hostPlatform.system}.default
       inputs.polymc.packages.${pkgs.stdenv.hostPlatform.system}.default
       inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
