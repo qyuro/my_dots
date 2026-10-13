@@ -50,7 +50,7 @@
       inputs.fetch.packages.${pkgs.stdenv.hostPlatform.system}.default
       inputs.polymc.packages.${pkgs.stdenv.hostPlatform.system}.default
       inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
-      inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
+      # inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
       #TEST XMPP
       gajim
       ###WINE
@@ -89,6 +89,7 @@
       ###SOCIETY###
       discord
       # vesktop
+      element-desktop
       ayugram-desktop
       ###FOR_DESKTOP_AND_JOKES###
       ventoy-full-gtk

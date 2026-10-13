@@ -9,5 +9,6 @@
    ./obsidian.nix
    ./gtk-icons.nix
    ./git.nix
+   # ./zsh.nix
  ];
 }
