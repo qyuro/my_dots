@@ -4,6 +4,7 @@
     ./amd.nix
     # ./console.nix
     ./openssh.nix
+    ./wg-quick.nix
     # ./autologin.nix
     # ./resolved.nix
     ./kernel.nix

@@ -89,9 +89,11 @@
       ###SOCIETY###
       discord
       # vesktop
+      fluffychat
       element-desktop
       ayugram-desktop
       ###FOR_DESKTOP_AND_JOKES###
+      wireguard-tools
       ventoy-full-gtk
       obsidian
       chromium
