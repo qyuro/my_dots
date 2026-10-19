@@ -19,7 +19,7 @@
     ./git.nix
     ./qemu.nix
     ./zsh.nix
-    ./niri.nix
+    # ./niri.nix
     ./throne.nix
     ./packages.nix
     ./firefox.nix
@@ -36,9 +36,9 @@
     #TEST HAPP
     ./happ-module.nix
     ./test-happ.nix
-    # ./hyprland.nix
+    ./hyprland.nix
     ./nixld.nix
-    ./sway.nix
+    # ./sway.nix
     ./obs.nix
     ./rtkit.nix
     ./fonts.nix
@@ -47,7 +47,7 @@
     # ./virtualbox.nix
     # ./wayfire.nix
     ./docker.nix
-    ./xdg.nix
+    # ./xdg.nix
     # ./vm-curator.nix
     # ./finger.nix
     # ./river.nix
@@ -63,5 +63,6 @@
     ./env.nix
     ./pam.nix
     ./lazygit.nix
+    ./postgresql.nix
   ];
 }

@@ -31,13 +31,13 @@
       # url = "github:nix-community/nixvim/nixos-26.05";
       # inputs.nixpkgs.follows = "nixpkgs";
     };
-    umbriel = {
-      url = "github:noctalia-dev/umbriel";
-    };
-    tele = {
-      url = "github:sorokin-vladimir/tele";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
-    };
+    # umbriel = {
+      # url = "github:noctalia-dev/umbriel";
+    # };
+    # tele = {
+      # url = "github:sorokin-vladimir/tele";
+      # inputs.nixpkgs.follows = "nixpkgs-unstable";
+    # };
     # niri = {
       # url = "github:sodiboo/niri-flake";
     # };
@@ -51,10 +51,10 @@
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
-    ghostty = {
-      url = "github:ghostty-org/ghostty";
+    # ghostty = {
+      # url = "github:ghostty-org/ghostty";
       # inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # };
     fetch.url = "github:areofyl/fetch";
     helix.url = "github:helix-editor/helix";
     # xwayland-satellite.url = "github:Supreeeme/xwayland-satellite";
@@ -74,12 +74,12 @@
       polymc,
       noctalia,
       bitwig,
-      ghostty,
+      # ghostty,
       neu-nix,
       # niri,
       fetch,
       helix,
-      umbriel,
+      # umbriel,
       # xwayland-satellite,
       ...
     }@inputs:

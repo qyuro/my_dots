@@ -30,12 +30,12 @@ hl.monitor({
     -- scale    = "1",
     scale    = "1.8",
 })
-hl.monitor({
-    output   = "HDMI-A-1",
-    mode     = "1920x1080@60.000Hz",
-    position = "auto-right",
-    scale    = "1",
-})
+-- hl.monitor({
+    -- output   = "HDMI-A-1",
+    -- mode     = "1920x1080@60.000Hz",
+    -- position = "auto-right",
+    -- scale    = "1",
+-- })
 
 
 ---------------------
@@ -43,7 +43,7 @@ hl.monitor({
 ---------------------
 
 -- Set programs that you use
-local terminal    = "ghostty"
+local terminal    = "kitty"
 local fileManager = "nautilus"
 -- local menu        = "noctalia-shell ipc call launcher toggle"
 local menu = "noctalia msg panel-toggle launcher"
@@ -58,6 +58,7 @@ local menu = "noctalia msg panel-toggle launcher"
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function () 
+  hl.exec_cmd("awww-daemon")
   hl.exec_cmd("noctalia")
 end)
 

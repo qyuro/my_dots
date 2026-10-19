@@ -17,19 +17,7 @@
           cp ${./bitwig.jar} $out/libexec/bin/bitwig.jar
         '';
       }))
-      ###FOR_SWAY
-      swayosd
-      swaylock
-      tofi
-      fuzzel
-      # wmenu
-      ironbar
-      yambar
-      # swayimg
-      swaynotificationcenter
-      ###
       inputs.helix.packages.${pkgs.stdenv.hostPlatform.system}.default
-      xwayland-satellite
       ###for helix
       #FOR_GO
       gopls
@@ -46,7 +34,7 @@
       python313Packages.python-lsp-server
       zuban
 
-      inputs.tele.packages.${pkgs.stdenv.hostPlatform.system}.default
+      # inputs.tele.packages.${pkgs.stdenv.hostPlatform.system}.default
       inputs.fetch.packages.${pkgs.stdenv.hostPlatform.system}.default
       inputs.polymc.packages.${pkgs.stdenv.hostPlatform.system}.default
       inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
@@ -64,7 +52,7 @@
       guitarix
       guitarix-vst
       ###HYPR_UTIL
-      # hyprshot
+      hyprshot
       ###EMACS
       # emacs-pgtk
       # emacsPackages.vterm

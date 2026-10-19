@@ -2,9 +2,7 @@
 {
   wayland.windowManager.hyprland = {
     enable = true;
-    # package = pkgs.hyprland;
     configType = "lua";
-    # extraConfig = builtins.readFile ./hypr/hyprland.lua;
     extraConfig = ''
     hl.on("hyprland.start", function ()
       hl.exec_cmd("${pkgs.hyprpolkitagent}/libexec/hyprpolkitagent")
@@ -12,12 +10,7 @@
     end)
     ${builtins.readFile ./hypr/hyprland.lua}
     '';
-    # xdg.configFile."hypr/hyprland.lua".source = ./hypr/hyprland.lua;
-    # plugins = [
-       # unstable.pkgs.hyprlandPlugins.hy3
-    # ];
     xwayland.enable = true;
-    # portalPackage = pkgs.xdg-desktop-portal-hyprland;
   };
 
 }
