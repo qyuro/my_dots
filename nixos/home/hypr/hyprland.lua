@@ -28,7 +28,7 @@ hl.monitor({
     mode     = "2880x1800@120.000Hz",
     position = "0x0",
     -- scale    = "1",
-    scale    = "1.8",
+    scale    = "2",
 })
 -- hl.monitor({
     -- output   = "HDMI-A-1",
@@ -80,7 +80,7 @@ hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
 hl.env("XDG_SESSION_TYPE", "wayland")
 hl.env("XDG_SESSION_DESKTOP", "Hyprland")
 -- TEST PIPEWIRE
-hl.env("LD_LIBRARY_PATH","/run/current-system/sw/lib/pipewire")
+-- hl.env("LD_LIBRARY_PATH","/run/current-system/sw/lib/pipewire")
 -----------------------
 ----- PERMISSIONS -----
 -----------------------
@@ -152,6 +152,16 @@ hl.config({
 
     animations = {
         enabled = true,
+    },
+    -- TEST RENDER
+    render = {
+        cm_enabled = true,
+        cm_auto_hdr = 1,
+        cm_sdr_eotf = "srgb",
+        direct_scanout = 1,
+    },
+    xwayland = {
+        force_zero_scaling = true,
     },
 })
 
@@ -230,6 +240,7 @@ hl.config({
     misc = {
         force_default_wallpaper = 0,    -- Set to 0 or 1 to disable the anime mascot wallpapers
         disable_hyprland_logo   = true, -- If true disables the random hyprland logo / anime girl background. :(
+        vrr = 2,
     },
 })
 

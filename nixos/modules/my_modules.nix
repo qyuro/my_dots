@@ -18,7 +18,8 @@
     ./pipewire.nix
     ./git.nix
     ./qemu.nix
-    ./zsh.nix
+    # ./zsh.nix
+    ./fish.nix
     # ./niri.nix
     ./throne.nix
     ./packages.nix
