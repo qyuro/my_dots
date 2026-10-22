@@ -42,11 +42,11 @@
       # url = "github:sodiboo/niri-flake";
     # };
     # vm-curator.url = "github:mroboff/vm-curator";
-    # hyprland.url = "github:hyprwm/Hyprland";
-    # hyprland-plugins = {
-    # url = "github:hyprwm/hyprland-plugins";
-    # inputs.hyprland.follows = "hyprland";
-    # };
+    hyprland.url = "github:hyprwm/Hyprland";
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
+    };
     noctalia = {
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs-unstable";

@@ -20,7 +20,7 @@
     ./qemu.nix
     # ./zsh.nix
     ./fish.nix
-    # ./niri.nix
+    ./niri.nix
     ./throne.nix
     ./packages.nix
     ./firefox.nix

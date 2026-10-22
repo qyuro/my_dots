@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   fonts.packages = with pkgs; [
+    corefonts
     noto-fonts
     symbola
     nerd-fonts.symbols-only

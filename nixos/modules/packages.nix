@@ -77,16 +77,17 @@
       ###SOCIETY###
       discord
       # vesktop
+      cinny-desktop
       fluffychat
       element-desktop
       ayugram-desktop
       ###FOR_DESKTOP_AND_JOKES###
+      gopass
       wireguard-tools
       ventoy-full-gtk
       obsidian
       chromium
       kdePackages.filelight
-      # rmpc
       gparted-full
       p7zip
       hyprpolkitagent
@@ -96,7 +97,6 @@
       duf
       qpwgraph
       totem
-      # rio
       kitty
       nvtopPackages.full
       mangohud
@@ -105,7 +105,6 @@
       brightnessctl
       eog
       ##EDITORS_FOR_WORD###
-      # helix
       onlyoffice-desktopeditors
       ###JUST_NAUTILIUS###
       nautilus
