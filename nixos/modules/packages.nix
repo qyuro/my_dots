@@ -82,6 +82,7 @@
       element-desktop
       ayugram-desktop
       ###FOR_DESKTOP_AND_JOKES###
+      xwayland-satellite
       gopass
       wireguard-tools
       ventoy-full-gtk
