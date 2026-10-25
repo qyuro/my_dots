@@ -1,4 +1,4 @@
-{pkgs,config,lib,inputs, ...}:
+{pkgs,config,lib,inputs,unstable, ...}:
 {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -14,9 +14,11 @@
     portalPackage = null;
     # package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
     # portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-    # plugins = [
+    plugins = [
       # inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprexpo
-    # ];
+      # unstable.pkgs.hyprlandPlugins.hy3
+      unstable.pkgs.hyprlandPlugins.hy3
+    ];
   };
 
 }

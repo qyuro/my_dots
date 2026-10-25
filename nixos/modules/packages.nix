@@ -27,6 +27,7 @@
       gotests
       #FOR_C
       clang-tools
+      lldb
       #FOR_PY
       ruff
       ty
@@ -39,6 +40,7 @@
       inputs.polymc.packages.${pkgs.stdenv.hostPlatform.system}.default
       inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
       # inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
+      ghostty
       #TEST XMPP
       gajim
       ###WINE
@@ -83,7 +85,10 @@
       ayugram-desktop
       ###FOR_DESKTOP_AND_JOKES###
       xwayland-satellite
+
       gopass
+      pinentry-curses
+
       wireguard-tools
       ventoy-full-gtk
       obsidian

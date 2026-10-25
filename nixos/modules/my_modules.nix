@@ -41,6 +41,7 @@
     ./nixld.nix
     # ./sway.nix
     ./obs.nix
+    ./gnupg.nix
     ./rtkit.nix
     ./fonts.nix
     # ./waybar.nix

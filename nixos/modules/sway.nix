@@ -6,8 +6,9 @@
       gtk = true;
       base = true;
     };
-    package = unstable.swayfx;
+    # package = unstable.swayfx;
     xwayland.enable = true;
+    extraPackages = [];
   };
   xdg.portal = {
     enable = true;
@@ -23,6 +24,7 @@
       };
     };
     extraPortals = with pkgs; [
+      # xdg-desktop-portal-wlr
       xdg-desktop-portal-gtk
     ];
   };
