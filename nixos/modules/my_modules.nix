@@ -17,7 +17,7 @@
     # ./for_x.nix
     ./pipewire.nix
     ./git.nix
-    ./qemu.nix
+    # ./qemu.nix
     # ./zsh.nix
     ./fish.nix
     ./niri.nix
