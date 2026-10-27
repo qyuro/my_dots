@@ -117,7 +117,7 @@
       ###JUST_NAUTILIUS###
       nautilus
       ###GAMES###
-      # osu-lazer-bin
+      osu-lazer-bin
       # opentabletdriver
       qbittorrent
       ###FOR_PROGRAMMING###
