@@ -34,6 +34,7 @@
     ./bluetooth.nix
     ./ollama.nix
     ./services.nix
+    ./zapret-discord-youtube.nix
     #TEST HAPP
     ./happ-module.nix
     ./test-happ.nix

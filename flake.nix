@@ -10,6 +10,7 @@
       url = "github:PolyMC/PolyMC";
       inputs.nixpkgs.follows = "nixpkgs-old";
     };
+    zapret-discord-youtube.url = "github:kartavkun/zapret-discord-youtube";
     # fenix={
     # url = "github:nix-community/fenix";
     # inputs.nixpkgs.follows = "nixpkgs";
@@ -79,6 +80,7 @@
       # niri,
       fetch,
       helix,
+      zapret-discord-youtube,
       # umbriel,
       # xwayland-satellite,
       ...
@@ -127,6 +129,7 @@
             ];
           }
           # niri.nixosModules.niri
+          zapret-discord-youtube.nixosModules.withTestTools
           ./nixos/configuration.nix
         ];
       };

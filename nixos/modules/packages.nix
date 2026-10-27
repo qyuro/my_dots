@@ -43,6 +43,7 @@
       ghostty
       #TEST XMPP
       gajim
+      dino
       ###WINE
       wineWow64Packages.staging
       winetricks
@@ -89,6 +90,7 @@
       gopass
       pinentry-curses
 
+      dosbox-staging
       wireguard-tools
       ventoy-full-gtk
       obsidian
