@@ -19,7 +19,8 @@
     ./git.nix
     # ./qemu.nix
     # ./zsh.nix
-    ./fish.nix
+    # ./fish.nix
+    ./nushell.nix
     ./niri.nix
     ./throne.nix
     ./packages.nix
@@ -67,5 +68,6 @@
     ./pam.nix
     ./lazygit.nix
     ./postgresql.nix
+    ./craftapss.nix
   ];
 }

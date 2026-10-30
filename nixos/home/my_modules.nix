@@ -10,6 +10,7 @@
    ./gtk-icons.nix
    ./git.nix
    # ./zsh.nix
-   ./fish.nix
+   # ./fish.nix
+   ./nushell.nix
  ];
 }

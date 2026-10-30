@@ -11,6 +11,8 @@
       inputs.nixpkgs.follows = "nixpkgs-old";
     };
     zapret-discord-youtube.url = "github:kartavkun/zapret-discord-youtube";
+    nix-craftapps.url = "github:olafkfreund/nix-craftapps";
+    amane.url = "github:MystiaFin/amane";
     # fenix={
     # url = "github:nix-community/fenix";
     # inputs.nixpkgs.follows = "nixpkgs";
@@ -81,6 +83,7 @@
       fetch,
       helix,
       zapret-discord-youtube,
+      nix-craftapps,
       # umbriel,
       # xwayland-satellite,
       ...
@@ -129,6 +132,7 @@
             ];
           }
           # niri.nixosModules.niri
+          nix-craftapps.nixosModules.default
           zapret-discord-youtube.nixosModules.withTestTools
           ./nixos/configuration.nix
         ];

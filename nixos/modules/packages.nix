@@ -36,6 +36,7 @@
       zuban
 
       # inputs.tele.packages.${pkgs.stdenv.hostPlatform.system}.default
+      inputs.amane.packages.x86_64-linux.default
       inputs.fetch.packages.${pkgs.stdenv.hostPlatform.system}.default
       inputs.polymc.packages.${pkgs.stdenv.hostPlatform.system}.default
       inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
@@ -100,7 +101,7 @@
       p7zip
       hyprpolkitagent
       hyperfine
-      opencode
+      # opencode
       yazi
       duf
       qpwgraph
@@ -181,5 +182,6 @@
       fastfetch
       # xwayland-satellite
       dioxus-cli
+      opencode
     ]);
 }
