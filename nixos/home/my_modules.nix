@@ -11,7 +11,7 @@
    ./gtk-icons.nix
    ./git.nix
    # ./zsh.nix
-   # ./fish.nix
-   ./nushell.nix
+   ./fish.nix
+   # ./nushell.nix
  ];
 }

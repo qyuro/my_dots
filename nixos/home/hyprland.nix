@@ -16,8 +16,8 @@
     # portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
     plugins = [
       # inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprexpo
-      # unstable.pkgs.hyprlandPlugins.hy3
-      unstable.pkgs.hyprlandPlugins.hy3
+      pkgs.hyprlandPlugins.hy3
+      # pkgs.hyprlandPlugins.hy3
     ];
   };
 

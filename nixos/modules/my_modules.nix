@@ -19,15 +19,14 @@
     ./git.nix
     # ./qemu.nix
     # ./zsh.nix
-    # ./fish.nix
-    ./nushell.nix
+    ./fish.nix
+    # ./nushell.nix
     ./niri.nix
     ./throne.nix
     ./packages.nix
     ./firefox.nix
     ./lact.nix
     ./tuned.nix
-    ./kdeconnect.nix
     # ./power-profiles-daemon.nix
     ./user.nix
     # ./gnome.nix
@@ -51,11 +50,11 @@
     # ./virtualbox.nix
     # ./wayfire.nix
     ./docker.nix
-    # ./xdg.nix
     # ./vm-curator.nix
     # ./finger.nix
     # ./river.nix
-    # ./kde.nix
+    ./kde.nix
+    ./kdeconnect.nix
     # ./nixvim.nix
     # ./dwl.nix
     # ./mango.nix

@@ -46,8 +46,9 @@ hl.monitor({
 local terminal    = "kitty"
 local fileManager = "nautilus"
 -- local menu        = "noctalia-shell ipc call launcher toggle"
-local menu = "noctalia msg panel-toggle launcher"
-
+local menu = "amane ipc call toggle-launcher"
+local swapbar = "amane ipc call toggle-bar"
+local lock = "amane ipc call lock"
 -------------------
 ---- AUTOSTART ----
 -------------------
@@ -59,7 +60,8 @@ local menu = "noctalia msg panel-toggle launcher"
 --
 hl.on("hyprland.start", function () 
   hl.exec_cmd("awww-daemon")
-  hl.exec_cmd("noctalia")
+  -- hl.exec_cmd("amane run")
+  hl.exec_cmd("amane compile --restart")
 end)
 
 -------------------------------
@@ -68,17 +70,17 @@ end)
 
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
 
-hl.env("XCURSOR_SIZE", "24")
-hl.env("HYPRCURSOR_SIZE", "24")
+-- hl.env("XCURSOR_SIZE", "24")
+-- hl.env("HYPRCURSOR_SIZE", "24")
 
-hl.env("QT_QPA_PLATFORM", "wayland;xcb")
-hl.env("SDL_VIDEODRIVER", "wayland,x11")
-hl.env("GDK_BACKEND", "wayland,x11")
-hl.env("CLUTTER_BACKEND", "wayland") 
+-- hl.env("QT_QPA_PLATFORM", "wayland;xcb")
+-- hl.env("SDL_VIDEODRIVER", "wayland,x11")
+-- hl.env("GDK_BACKEND", "wayland,x11")
+-- hl.env("CLUTTER_BACKEND", "wayland") 
 
-hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
-hl.env("XDG_SESSION_TYPE", "wayland")
-hl.env("XDG_SESSION_DESKTOP", "Hyprland")
+-- hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
+-- hl.env("XDG_SESSION_TYPE", "wayland")
+-- hl.env("XDG_SESSION_DESKTOP", "Hyprland")
 -- TEST PIPEWIRE
 -- hl.env("LD_LIBRARY_PATH","/run/current-system/sw/lib/pipewire")
 -----------------------
@@ -298,7 +300,7 @@ local closeWindowBind = hl.bind(mainMod .. " + Q", hy3.kill_active())
 -- hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + X", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("pkill .quickshell-wra;noctalia-shell"))
+hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(swapbar))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("hyprshot -m region -z --clipboard-only"))
 -- hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
@@ -320,7 +322,7 @@ hl.bind(mainMod .. "+ SHIFT + K", hy3.move_window("up"))
 hl.bind(mainMod .. "+ SHIFT + J", hy3.move_window("down")) 
 
 hl.bind(mainMod .. "+ A", hy3.change_focus("raise")) 
-
+hl.bind(mainMod .. "+ SHIFT + L", hl.dsp.exec_cmd(lock))
 -- hl.bind(mainMod .. "+ CTRL + H"), hy3.change_focus("raise"))
 
 hl.bind(mainMod .. " + V",hy3.make_group("v"))
