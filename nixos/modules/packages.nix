@@ -56,9 +56,9 @@
       guitarix
       guitarix-vst
       ###HYPR_UTIL
-      hyprshot
+      # hyprshot
       ###EMACS
-      # emacs-pgtk
+      emacs-pgtk
       # emacsPackages.vterm
       # fd
       # shellcheck
@@ -86,7 +86,6 @@
       element-desktop
       ayugram-desktop
       ###FOR_DESKTOP_AND_JOKES###
-      xwayland-satellite
 
       gopass
       pinentry-curses
@@ -180,7 +179,6 @@
       # obsidian
       zig
       fastfetch
-      # xwayland-satellite
       dioxus-cli
       opencode
     ]);

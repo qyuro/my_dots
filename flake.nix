@@ -41,11 +41,9 @@
       # url = "github:sorokin-vladimir/tele";
       # inputs.nixpkgs.follows = "nixpkgs-unstable";
     # };
-    # niri = {
-      # url = "github:sodiboo/niri-flake";
-    # };
+    # niri.url = "github:sodiboo/niri-flake";
     # vm-curator.url = "github:mroboff/vm-curator";
-    hyprland.url = "github:hyprwm/Hyprland";
+    # hyprland.url = "github:hyprwm/Hyprland";
     # hyprland-plugins = {
       # url = "github:hyprwm/hyprland-plugins";
       # inputs.hyprland.follows = "hyprland";

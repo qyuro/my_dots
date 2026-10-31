@@ -4,7 +4,8 @@
  [
    ./pointer.nix
    ./rmpc.nix
-   ./hyprland.nix
+   # ./hyprland.nix
+   # ./niri.nix
    # ./nixvim/nixvim.nix
    ./obsidian.nix
    ./gtk-icons.nix
