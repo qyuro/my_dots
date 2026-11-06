@@ -6,8 +6,8 @@
    ./rmpc.nix
    # ./hyprland.nix
    # ./niri.nix
-   # ./nixvim/nixvim.nix
-   ./obsidian.nix
+   ./nixvim/nixvim.nix
+   # ./obsidian.nix
    ./gtk-icons.nix
    ./git.nix
    # ./zsh.nix

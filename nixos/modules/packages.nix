@@ -12,11 +12,11 @@
   environment.systemPackages =
     with pkgs;
     [
-      (bitwig-pkgs.bitwig-studio6.overrideAttrs (old: {
-        postInstall = (old.postInstall or "") + ''
-          cp ${./bitwig.jar} $out/libexec/bin/bitwig.jar
-        '';
-      }))
+      # (bitwig-pkgs.bitwig-studio6.overrideAttrs (old: {
+      #   postInstall = (old.postInstall or "") + ''
+      #     cp ${./bitwig.jar} $out/libexec/bin/bitwig.jar
+      #   '';
+      # }))
       inputs.helix.packages.${pkgs.stdenv.hostPlatform.system}.default
       ###for helix
       #FOR_GO
@@ -41,9 +41,13 @@
       inputs.polymc.packages.${pkgs.stdenv.hostPlatform.system}.default
       inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
       # inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
+
       ghostty
       #TEST XMPP
+      movim
       gajim
+      unstable.kaidan
+      movim
       dino
       ###WINE
       wineWow64Packages.staging
@@ -59,23 +63,39 @@
       # hyprshot
       ###EMACS
       emacs-pgtk
-      # emacsPackages.vterm
+      emacsPackages.vterm
       # fd
-      # shellcheck
+      shellcheck
       # isync
       # emacsPackages.mu4e
       # mu
       # imagemagick
-      # ripgrep
-      # shfmt
-      # html-tidy
-      # stylelint
-      # js-beautify
-      # black
+      ripgrep
+      shfmt
+      html-tidy
+      stylelint
+      js-beautify
+      black
       pipenv
       python313Packages.pytest
       # emacsPackages.pytest
       ### FOR PENTEST
+
+      python314Packages.dirsearch
+      burpsuite
+      
+      gdb
+      # pwndbg
+      pwntools
+      binutils
+      file
+      checksec
+      strace
+      ltrace
+      ghidra-bin
+      # cutter
+
+      
       wireshark
       nmap
       ###SOCIETY###
@@ -93,7 +113,7 @@
       dosbox-staging
       wireguard-tools
       ventoy-full-gtk
-      obsidian
+      unstable.obsidian
       chromium
       kdePackages.filelight
       gparted-full
@@ -152,34 +172,33 @@
       gore
       multimarkdown
       nixfmt
-      # ida-free
+      ida-free
       ###TYPST###
       # typstwriter
       # typst-live
       # typst
       # typstyle
-      # tor
-      # tor-browser
+      ###TOR
+      tor
+      tor-browser
       # torsocks
       # TRY FROM NUR
       # nur.repos.hythera.waterfox-bin
       # nur.repos.trev.helium
-    ]
-    ++ (with unstable; [
-      quickshell
-      # noctalia-shell
-      ghidra-bin
-      gcc
-      clang
-      fasm
-      uv
-      go
-      wails
-      protonup-qt
-      # obsidian
-      zig
-      fastfetch
-      dioxus-cli
-      opencode
-    ]);
+
+      unstable.quickshell
+      # unstable.noctalia-shell
+      unstable.gcc
+      unstable.clang
+      unstable.fasm
+      unstable.uv
+      unstable.go
+      unstable.wails
+      unstable.protonup-qt
+      # unstable.obsidian
+      unstable.zig
+      unstable.fastfetch
+      unstable.dioxus-cli
+      unstable.opencode
+    ];
 }

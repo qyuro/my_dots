@@ -60,8 +60,8 @@ local lock = "amane ipc call lock"
 --
 hl.on("hyprland.start", function () 
   hl.exec_cmd("awww-daemon")
-  -- hl.exec_cmd("amane run")
-  hl.exec_cmd("amane compile --restart")
+  hl.exec_cmd("amane run")
+  -- hl.exec_cmd("amane compile --restart")
 end)
 
 -------------------------------

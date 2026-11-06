@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   fonts.packages = with pkgs; [
+    cascadia-code
     corefonts
     noto-fonts
     symbola

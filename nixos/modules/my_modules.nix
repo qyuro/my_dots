@@ -11,7 +11,7 @@
     ./network.nix
     ./timezone.nix
     ./gamemode.nix
-    # ./opentablet.nix
+    ./opentablet.nix
     ./steam.nix
     ./locale.nix
     # ./for_x.nix
@@ -24,12 +24,15 @@
     ./niri.nix
     ./throne.nix
     ./packages.nix
+    ./cutter.nix
+    ./bitwig.nix
     ./firefox.nix
     ./lact.nix
     ./tuned.nix
     # ./power-profiles-daemon.nix
     ./user.nix
     # ./gnome.nix
+    ./appimage.nix
     ./displaymanager.nix
     ./bluetooth.nix
     ./ollama.nix
@@ -53,7 +56,7 @@
     # ./vm-curator.nix
     # ./finger.nix
     # ./river.nix
-    ./kde.nix
+    # ./kde.nix
     ./kdeconnect.nix
     # ./nixvim.nix
     # ./dwl.nix
@@ -61,7 +64,7 @@
     ./wireshark.nix
     # ./umbriel.nix
     # ./jack.nix
-    # ./tor.nix
+    ./tor.nix
     ./nh.nix
     ./env.nix
     ./pam.nix

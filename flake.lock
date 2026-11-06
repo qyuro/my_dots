@@ -170,11 +170,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1793251511,
-        "narHash": "sha256-vd8oYQN3cqg9dq0NGsl9Vzxqum2vL1gsao3gZ5sRVLA=",
+        "lastModified": 1793856199,
+        "narHash": "sha256-UKTTtsKbCzGdiGpug+7tORCEjnMdUM2ICTvPJ6Pq4dU=",
         "owner": "olafkfreund",
         "repo": "nix-craftapps",
-        "rev": "4a9e69c6c1e196d86e39b33516544c11bb6dfb5b",
+        "rev": "938b9f9507afb5c2ca6d12269d49e8f2db1274c9",
         "type": "github"
       },
       "original": {
@@ -265,11 +265,11 @@
     },
     "nixpkgs_4": {
       "locked": {
-        "lastModified": 1792773339,
-        "narHash": "sha256-rZLrzrC6i+jnTAlvPZHogKDulY7WWDEv9hJeHieO7Zw=",
+        "lastModified": 1793540411,
+        "narHash": "sha256-fiPJ88izTVucjeo2EQ3jk4aWmLg03I1D4vxnX2QjEgE=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "3ec636362e1816bc2f0888fa0fa2c69f1bc9e504",
+        "rev": "0bb2eedc20e4739f29e8045034f2828ad7054f8f",
         "type": "github"
       },
       "original": {
@@ -312,6 +312,22 @@
       }
     },
     "nixpkgs_7": {
+      "locked": {
+        "lastModified": 1775710090,
+        "narHash": "sha256-ar3rofg+awPB8QXDaFJhJ2jJhu+KqN/PRCXeyuXR76E=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4c1018dae018162ec878d42fec712642d214fdfa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_8": {
       "locked": {
         "lastModified": 1793110635,
         "narHash": "sha256-dhoW6VgFWlaodSY5jrBn+CF2FLmaUvDVgM7+C7T2+NM=",
@@ -405,6 +421,7 @@
         "nixvim": "nixvim",
         "noctalia": "noctalia",
         "polymc": "polymc",
+        "tg-ws-proxy": "tg-ws-proxy",
         "zapret-discord-youtube": "zapret-discord-youtube"
       }
     },
@@ -446,6 +463,41 @@
         "type": "github"
       }
     },
+    "tg-ws-proxy": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_7",
+        "tg-ws-proxy-src": "tg-ws-proxy-src"
+      },
+      "locked": {
+        "lastModified": 1776260769,
+        "narHash": "sha256-9/aVUVEW/7aiq1QxUBR4o9Q9TV9lm6EZFQcBHvz/gdA=",
+        "owner": "pialtor",
+        "repo": "tg-ws-proxy-flake",
+        "rev": "144a8670ce3d55fdca345c86f3351f72f357d4c8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pialtor",
+        "repo": "tg-ws-proxy-flake",
+        "type": "github"
+      }
+    },
+    "tg-ws-proxy-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1776192974,
+        "narHash": "sha256-xOzFclddqk5ILz2cp3It9aW7vR9+OoTgf9Jx5BcHkAA=",
+        "owner": "Flowseal",
+        "repo": "tg-ws-proxy",
+        "rev": "548ec05fc51678d149dc89df4ba795d457b11192",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Flowseal",
+        "repo": "tg-ws-proxy",
+        "type": "github"
+      }
+    },
     "tomlplusplus": {
       "flake": false,
       "locked": {
@@ -464,7 +516,7 @@
     },
     "zapret-discord-youtube": {
       "inputs": {
-        "nixpkgs": "nixpkgs_7",
+        "nixpkgs": "nixpkgs_8",
         "zapret-flowseal": "zapret-flowseal"
       },
       "locked": {

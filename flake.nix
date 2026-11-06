@@ -13,6 +13,7 @@
     zapret-discord-youtube.url = "github:kartavkun/zapret-discord-youtube";
     nix-craftapps.url = "github:olafkfreund/nix-craftapps";
     amane.url = "github:MystiaFin/amane";
+    tg-ws-proxy.url = "github:pialtor/tg-ws-proxy-flake";
     # fenix={
     # url = "github:nix-community/fenix";
     # inputs.nixpkgs.follows = "nixpkgs";
@@ -82,6 +83,7 @@
       helix,
       zapret-discord-youtube,
       nix-craftapps,
+      tg-ws-proxy,
       # umbriel,
       # xwayland-satellite,
       ...
@@ -100,6 +102,10 @@
       # rustToolchain = fenix.packages.${system}.stable.toolchain;
     in
     {
+      #TG WS PROXY
+      packages.${system}.tg-ws-proxy = tg-ws-proxy.packages.${system}.default;
+      apps.${system}.tg-ws-proxy = tg-ws-proxy.apps.${system}.default; # Если нужен запуск одной командой
+      # 
       # nixos - system hostname
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         specialArgs = {
