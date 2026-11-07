@@ -15,6 +15,7 @@
       "plugdev"
       "docker"
       "jackaudio"
+      "wireshark"
     ];
   };
 }

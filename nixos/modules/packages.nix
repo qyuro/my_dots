@@ -199,6 +199,6 @@
       unstable.zig
       unstable.fastfetch
       unstable.dioxus-cli
-      unstable.opencode
+      opencode
     ];
 }
