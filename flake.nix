@@ -36,26 +36,26 @@
       # inputs.nixpkgs.follows = "nixpkgs";
     };
     # umbriel = {
-      # url = "github:noctalia-dev/umbriel";
+    # url = "github:noctalia-dev/umbriel";
     # };
-    # tele = {
-      # url = "github:sorokin-vladimir/tele";
+    tele = {
+      url = "github:sorokin-vladimir/tele";
       # inputs.nixpkgs.follows = "nixpkgs-unstable";
-    # };
+    };
     # niri.url = "github:sodiboo/niri-flake";
     # vm-curator.url = "github:mroboff/vm-curator";
     # hyprland.url = "github:hyprwm/Hyprland";
     # hyprland-plugins = {
-      # url = "github:hyprwm/hyprland-plugins";
-      # inputs.hyprland.follows = "hyprland";
+    # url = "github:hyprwm/hyprland-plugins";
+    # inputs.hyprland.follows = "hyprland";
     # };
     noctalia = {
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     # ghostty = {
-      # url = "github:ghostty-org/ghostty";
-      # inputs.nixpkgs.follows = "nixpkgs";
+    # url = "github:ghostty-org/ghostty";
+    # inputs.nixpkgs.follows = "nixpkgs";
     # };
     fetch.url = "github:areofyl/fetch";
     helix.url = "github:helix-editor/helix";
@@ -105,7 +105,7 @@
       #TG WS PROXY
       packages.${system}.tg-ws-proxy = tg-ws-proxy.packages.${system}.default;
       apps.${system}.tg-ws-proxy = tg-ws-proxy.apps.${system}.default; # Если нужен запуск одной командой
-      # 
+      #
       # nixos - system hostname
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         specialArgs = {

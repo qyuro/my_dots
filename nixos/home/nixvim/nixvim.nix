@@ -4,6 +4,7 @@
   imports = [
     ./languages/lang.nix
     ./plugins/plugs.nix
+    ./keymaps.nix
   ];
 
   programs.nixvim = {
@@ -12,8 +13,14 @@
     defaultEditor = true;
     vimAlias = true;
 
+    extraConfigLuaPost = ''
+      vim.opt.runtimepath:prepend(vim.fn.expand("~/.config/nvim"))
+      local ok, matugen = pcall(require, "matugen")
+      matugen.setup()
+    '';
+
     colorschemes = {
-      moonfly.enable = true;
+      base16.enable = true;
     };
     clipboard = {
       register = "unnamedplus";
@@ -73,7 +80,7 @@
       indent-blankline.enable = true;
       gitsigns.enable = true;
       web-devicons.enable = true;
-      toggleterm.enable = true;
+      # toggleterm.enable = true;
     };
     performance.byteCompileLua = {
       enable = true;

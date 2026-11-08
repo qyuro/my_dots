@@ -1,5 +1,7 @@
 {
   imports = [
-    ./md.nix
+    # ./md.nix
+    ./obsidian.nix
+    ./toggleterm.nix
   ];
 }

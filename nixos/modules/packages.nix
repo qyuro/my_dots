@@ -9,196 +9,193 @@
   nixpkgs.config = {
     allowUnfree = true;
   };
-  environment.systemPackages =
-    with pkgs;
-    [
-      # (bitwig-pkgs.bitwig-studio6.overrideAttrs (old: {
-      #   postInstall = (old.postInstall or "") + ''
-      #     cp ${./bitwig.jar} $out/libexec/bin/bitwig.jar
-      #   '';
-      # }))
-      inputs.helix.packages.${pkgs.stdenv.hostPlatform.system}.default
-      ###for helix
-      #FOR_GO
-      gopls
-      golangci-lint-langserver
-      golangci-lint
-      gomodifytags
-      gotests
-      #FOR_C
-      clang-tools
-      lldb
-      #FOR_PY
-      ruff
-      ty
-      python313Packages.jedi-language-server
-      python313Packages.python-lsp-server
-      zuban
+  environment.systemPackages = with pkgs; [
+    # (bitwig-pkgs.bitwig-studio6.overrideAttrs (old: {
+    #   postInstall = (old.postInstall or "") + ''
+    #     cp ${./bitwig.jar} $out/libexec/bin/bitwig.jar
+    #   '';
+    # }))
+    inputs.helix.packages.${pkgs.stdenv.hostPlatform.system}.default
+    ###for helix
+    #FOR_GO
+    gopls
+    golangci-lint-langserver
+    golangci-lint
+    gomodifytags
+    gotests
+    #FOR_C
+    clang-tools
+    lldb
+    #FOR_PY
+    ruff
+    ty
+    python313Packages.jedi-language-server
+    python313Packages.python-lsp-server
+    zuban
 
-      # inputs.tele.packages.${pkgs.stdenv.hostPlatform.system}.default
-      inputs.amane.packages.x86_64-linux.default
-      inputs.fetch.packages.${pkgs.stdenv.hostPlatform.system}.default
-      inputs.polymc.packages.${pkgs.stdenv.hostPlatform.system}.default
-      inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
-      # inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.tele.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.amane.packages.x86_64-linux.default
+    inputs.fetch.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.polymc.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+    # inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
 
-      ghostty
-      #TEST XMPP
-      movim
-      gajim
-      unstable.kaidan
-      movim
-      dino
-      ###WINE
-      wineWow64Packages.staging
-      winetricks
-      yabridge
-      yabridgectl
-      ###FORGAME
-      faugus-launcher
-      ###TONELIB
-      guitarix
-      guitarix-vst
-      ###HYPR_UTIL
-      # hyprshot
-      ###EMACS
-      emacs-pgtk
-      emacsPackages.vterm
-      # fd
-      shellcheck
-      # isync
-      # emacsPackages.mu4e
-      # mu
-      # imagemagick
-      ripgrep
-      shfmt
-      html-tidy
-      stylelint
-      js-beautify
-      black
-      pipenv
-      python313Packages.pytest
-      # emacsPackages.pytest
-      ### FOR PENTEST
+    ghostty
+    #TEST XMPP
+    movim
+    gajim
+    unstable.kaidan
+    movim
+    dino
+    ###WINE
+    wineWow64Packages.staging
+    winetricks
+    yabridge
+    yabridgectl
+    ###FORGAME
+    faugus-launcher
+    ###TONELIB
+    guitarix
+    guitarix-vst
+    ###HYPR_UTIL
+    # hyprshot
+    ###EMACS
+    emacs-pgtk
+    emacsPackages.vterm
+    # fd
+    shellcheck
+    # isync
+    # emacsPackages.mu4e
+    # mu
+    # imagemagick
+    ripgrep
+    shfmt
+    html-tidy
+    stylelint
+    js-beautify
+    black
+    pipenv
+    python313Packages.pytest
+    # emacsPackages.pytest
+    ### FOR PENTEST
 
-      python314Packages.dirsearch
-      burpsuite
-      
-      gdb
-      # pwndbg
-      pwntools
-      binutils
-      file
-      checksec
-      strace
-      ltrace
-      ghidra-bin
-      # cutter
+    python314Packages.dirsearch
+    burpsuite
 
-      
-      wireshark
-      nmap
-      ###SOCIETY###
-      discord
-      # vesktop
-      cinny-desktop
-      fluffychat
-      element-desktop
-      ayugram-desktop
-      ###FOR_DESKTOP_AND_JOKES###
+    gdb
+    # pwndbg
+    pwntools
+    binutils
+    file
+    checksec
+    strace
+    ltrace
+    ghidra-bin
+    # cutter
 
-      gopass
-      pinentry-curses
+    wireshark
+    nmap
+    ###SOCIETY###
+    discord
+    # vesktop
+    cinny-desktop
+    fluffychat
+    element-desktop
+    ayugram-desktop
+    ###FOR_DESKTOP_AND_JOKES###
 
-      dosbox-staging
-      wireguard-tools
-      ventoy-full-gtk
-      unstable.obsidian
-      chromium
-      kdePackages.filelight
-      gparted-full
-      p7zip
-      hyprpolkitagent
-      hyperfine
-      # opencode
-      yazi
-      duf
-      qpwgraph
-      totem
-      kitty
-      nvtopPackages.full
-      mangohud
-      htop
-      awww
-      brightnessctl
-      eog
-      ##EDITORS_FOR_WORD###
-      onlyoffice-desktopeditors
-      ###JUST_NAUTILIUS###
-      nautilus
-      ###GAMES###
-      osu-lazer-bin
-      # opentabletdriver
-      qbittorrent
-      ###FOR_PROGRAMMING###
-      typescript
-      typescript-language-server
-      ###FOR RUST
-      rustup
-      #for dx
-      # androidsdk
-      # android-tools
-      # android-studio
-      # jdk
-      # binaryen
-      # dioxus-cli -chekc unstable
-      ###FOR WAILS
-      webkitgtk_4_1
-      webkitgtk_6_0
-      gtk3
-      nsis
-      upx
+    gopass
+    pinentry-curses
 
-      ###FYNE
-      fyne
+    dosbox-staging
+    wireguard-tools
+    ventoy-full-gtk
+    unstable.obsidian
+    chromium
+    kdePackages.filelight
+    gparted-full
+    p7zip
+    hyprpolkitagent
+    hyperfine
+    yazi
+    duf
+    qpwgraph
+    totem
+    kitty
+    nvtopPackages.full
+    mangohud
+    htop
+    awww
+    brightnessctl
+    eog
+    ##EDITORS_FOR_WORD###
+    onlyoffice-desktopeditors
+    ###JUST_NAUTILIUS###
+    nautilus
+    ###GAMES###
+    osu-lazer-bin
+    # opentabletdriver
+    qbittorrent
+    ###FOR_PROGRAMMING###
+    typescript
+    typescript-language-server
+    ###FOR RUST
+    rustup
+    #for dx
+    # androidsdk
+    # android-tools
+    # android-studio
+    # jdk
+    # binaryen
+    # dioxus-cli -chekc unstable
+    ###FOR WAILS
+    webkitgtk_4_1
+    webkitgtk_6_0
+    gtk3
+    nsis
+    upx
 
-      python3
-      postman
-      nodejs_26
-      usbutils
-      gnumake
-      cmake
-      subversion
-      gore
-      multimarkdown
-      nixfmt
-      ida-free
-      ###TYPST###
-      # typstwriter
-      # typst-live
-      # typst
-      # typstyle
-      ###TOR
-      tor
-      tor-browser
-      # torsocks
-      # TRY FROM NUR
-      # nur.repos.hythera.waterfox-bin
-      # nur.repos.trev.helium
+    ###FYNE
+    fyne
 
-      unstable.quickshell
-      # unstable.noctalia-shell
-      unstable.gcc
-      unstable.clang
-      unstable.fasm
-      unstable.uv
-      unstable.go
-      unstable.wails
-      unstable.protonup-qt
-      # unstable.obsidian
-      unstable.zig
-      unstable.fastfetch
-      unstable.dioxus-cli
-      opencode
-    ];
+    python3
+    postman
+    nodejs_26
+    usbutils
+    gnumake
+    cmake
+    subversion
+    gore
+    multimarkdown
+    nixfmt
+    ida-free
+    ###TYPST###
+    # typstwriter
+    # typst-live
+    # typst
+    # typstyle
+    ###TOR
+    tor
+    tor-browser
+    # torsocks
+    # TRY FROM NUR
+    # nur.repos.hythera.waterfox-bin
+    # nur.repos.trev.helium
+
+    unstable.quickshell
+    # unstable.noctalia-shell
+    unstable.gcc
+    unstable.clang
+    unstable.fasm
+    unstable.uv
+    unstable.go
+    unstable.wails
+    unstable.protonup-qt
+    # unstable.obsidian
+    unstable.zig
+    unstable.fastfetch
+    unstable.dioxus-cli
+    opencode
+    # unstable.opencode-desktop
+  ];
 }
