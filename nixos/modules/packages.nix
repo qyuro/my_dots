@@ -33,7 +33,7 @@
     python313Packages.python-lsp-server
     zuban
 
-    inputs.tele.packages.${pkgs.stdenv.hostPlatform.system}.default
+    # inputs.tele.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.amane.packages.x86_64-linux.default
     inputs.fetch.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.polymc.packages.${pkgs.stdenv.hostPlatform.system}.default
@@ -79,9 +79,10 @@
     # emacsPackages.pytest
     ### FOR PENTEST
 
+    john
     python314Packages.dirsearch
     burpsuite
-
+    netcat
     gdb
     # pwndbg
     pwntools
@@ -172,7 +173,8 @@
     ###TYPST###
     # typstwriter
     # typst-live
-    # typst
+    typst
+    # tinymist
     # typstyle
     ###TOR
     tor
@@ -180,7 +182,7 @@
     # torsocks
     # TRY FROM NUR
     # nur.repos.hythera.waterfox-bin
-    # nur.repos.trev.helium
+    nur.repos.trev.helium
 
     unstable.quickshell
     # unstable.noctalia-shell
@@ -195,7 +197,16 @@
     unstable.zig
     unstable.fastfetch
     unstable.dioxus-cli
-    opencode
-    # unstable.opencode-desktop
+    unstable.opencode
+    unstable.quickshell
+    ###FOR ESO
+    espup
+    esp-generate
+    unstable.espflash
+    probe-rs-tools
+    ###FOR LOCAL AI
+    llama-cpp-vulkan
+    # llama-cpp-rocm
+    # llama-cpp
   ];
 }

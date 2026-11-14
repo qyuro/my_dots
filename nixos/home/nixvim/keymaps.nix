@@ -23,6 +23,15 @@
           desc = "Clear search highlight";
         };
       }
+      # {
+      #   key = "<leader>t";
+      #   mode = "n";
+      #   action = "<cmd>ToggleTerm<CR>";
+      #   options = {
+      #     silent = true;
+      #     desc = "Toggle terminal";
+      #   };
+      # }
     ];
   };
 }

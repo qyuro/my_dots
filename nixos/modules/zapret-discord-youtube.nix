@@ -1,15 +1,15 @@
 {
   services.zapret-discord-youtube = {
     enable = true;
-    configName = "general(ALT)";
+    configName = "general(ALT9)";
     gameFilter = "all";
     listGeneral = [
       # ##добавлние url для работы запрета , тоесть запрет влият на аднные url
-      "www.instagram.com"
-      "www.meta.com"
-      "facebook.com"
-      "www.facebook.com"
-      "static.xx.fbcdn.net"
+      # "www.instagram.com"
+      # "www.meta.com"
+      # "facebook.com"
+      # "www.facebook.com"
+      # "static.xx.fbcdn.net"
     ];
     listExclude = [
       # ##чтобы запрет не работал на данные сайты
@@ -62,6 +62,9 @@
     ];
     ipsetExclude = [
       "45.137.148.81"
+      "78.142.230.107"
+      "127.0.0.1"
+      "127.0.0.2"
     ];
   };
 }

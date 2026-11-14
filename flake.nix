@@ -8,27 +8,29 @@
     bitwig.url = "github:Nixos/nixpkgs/655e3354167d63919a7f376897aa762d45d595e9";
     polymc = {
       url = "github:PolyMC/PolyMC";
-      inputs.nixpkgs.follows = "nixpkgs-old";
+      # inputs.nixpkgs.follows = "nixpkgs-old";
     };
     zapret-discord-youtube.url = "github:kartavkun/zapret-discord-youtube";
     nix-craftapps.url = "github:olafkfreund/nix-craftapps";
     amane.url = "github:MystiaFin/amane";
     tg-ws-proxy.url = "github:pialtor/tg-ws-proxy-flake";
+    lecoo-control-center.url = "path:/home/hxteher/git_downloads/Lecoo-Control-Center";
+    hermes-agent.url = "github:NousResearch/hermes-agent";
     # fenix={
     # url = "github:nix-community/fenix";
     # inputs.nixpkgs.follows = "nixpkgs";
     # };
-    # nur = {
-    # url = "github:nix-community/NUR";
-    # inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     neu-nix = {
       url = "github:ricardomaps/neu-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
-      url = "github:nix-community/home-manager/release-26.05";
-      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     nixvim = {
       url = "github:nix-community/nixvim";
@@ -84,6 +86,9 @@
       zapret-discord-youtube,
       nix-craftapps,
       tg-ws-proxy,
+      lecoo-control-center,
+      hermes-agent,
+      nur,
       # umbriel,
       # xwayland-satellite,
       ...
@@ -91,6 +96,9 @@
     let
       system = "x86_64-linux";
 
+      # hostConfig = {
+      # al
+      # }
       unstable = import nixpkgs-unstable {
         inherit system;
         config.allowUnfree = true;
@@ -118,26 +126,28 @@
             inputs
             system
             bitwig-pkgs
+
             ;
           #TEST
           neu = neu-nix;
-          # nur = import nur {
-          # nurpkgs = nixpkgs;
-          # inherit system;
-          # };
+          nur = import nur {
+            nurpkgs = nixpkgs;
+            inherit system;
+          };
         };
 
         modules = [
           {
             nixpkgs.overlays = [
               polymc.overlay
-              # nur.overlays.default
+              nur.overlays.default
               neu-nix.overlays.default
             ];
           }
           # niri.nixosModules.niri
           nix-craftapps.nixosModules.default
           zapret-discord-youtube.nixosModules.withTestTools
+          lecoo-control-center.nixosModules.default
           ./nixos/configuration.nix
         ];
       };
@@ -155,6 +165,7 @@
         modules = [
           ./nixos/home.nix
           nixvim.homeModules.nixvim
+          hermes-agent.homeManagerModules.default
         ];
       };
     };

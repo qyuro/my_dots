@@ -35,6 +35,32 @@
         45.137.148.81 selector.gs.capcom.com
         45.137.148.81 7f965.playfabapi.com
         45.137.148.81 storage.googleapis.com
+
+        # 78.142.230.107 production-us-central1-capi.sf6.streetfighter.com
+        # 78.142.230.107 production-asia-northeast1-capi.sf6.streetfighter.com
+        # 78.142.230.107 production-southamerica-east1-capi.sf6.streetfighter.com
+        # 78.142.230.107 production-europe-west2-capi.sf6.streetfighter.com
+        # 78.142.230.107 production-us-central1-battlehub.sf6.streetfighter.com
+        # 78.142.230.107 production-us-central1-customroom.sf6.streetfighter.com
+        # 78.142.230.107 production-asia-northeast1-battlehub.sf6.streetfighter.com
+        # 78.142.230.107 production-asia-northeast1-customroom.sf6.streetfighter.com
+        # 78.142.230.107 production-southamerica-east1-battlehub.sf6.streetfighter.com
+        # 78.142.230.107 production-southamerica-east1-customroom.sf6.streetfighter.com
+        # 78.142.230.107 production-europe-west2-battlehub.sf6.streetfighter.com
+        # 78.142.230.107 production-europe-west2-customroom.sf6.streetfighter.com
+        # 78.142.230.107 dzyiry2ohdgp7.cloudfront.net
+        # 78.142.230.107 d21d59npjlru09.cloudfront.net
+        # 78.142.230.107 production-us-central1-notify.sf6.streetfighter.com
+        # 78.142.230.107 hjm.rebe.capcom.com
+        # 78.142.230.107 mtm.rebe.capcom.com
+        # 78.142.230.107 mtms.rebe.capcom.com
+        # 78.142.230.107 mmr.rebe.capcom.com
+        # 78.142.230.107 nkm.rebe.capcom.com
+        # 78.142.230.107 wlt.rebe.capcom.com
+        # 78.142.230.107 selector.gs.capcom.com
+        # 78.142.230.107 7f965.playfabapi.com
+        # 78.142.230.107 storage.googleapis.com
+
         ###TEST AZURE
         # 45.137.148.81 mpsqosprod.southcentralus.cloudapp.azure.com 
         # 45.137.148.81 mpsqosprod.westus.cloudapp.azure.com

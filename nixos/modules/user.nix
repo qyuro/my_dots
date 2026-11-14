@@ -16,6 +16,7 @@
       "docker"
       "jackaudio"
       "wireshark"
+      "dialout"
     ];
   };
 }

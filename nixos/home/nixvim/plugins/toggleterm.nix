@@ -2,7 +2,7 @@
   programs.nixvim.plugins.toggleterm = {
     enable = true;
     settings = {
-      open_mapping = "[[<leader>\\]]";
+      open_mapping = "[[<C-\\>]]";
       direction = "float";
       options = {
         silent = true;

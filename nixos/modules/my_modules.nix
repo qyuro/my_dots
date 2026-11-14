@@ -1,5 +1,7 @@
 {
   imports = [
+    ###TEST _MY_FLAKE
+    ./lecoo-ctrl.nix
     ./boot.nix
     ./amd.nix
     # ./console.nix
@@ -17,7 +19,7 @@
     # ./for_x.nix
     ./pipewire.nix
     ./git.nix
-    # ./qemu.nix
+    ./qemu.nix
     # ./zsh.nix
     ./fish.nix
     # ./nushell.nix
@@ -54,7 +56,7 @@
     # ./wayfire.nix
     ./docker.nix
     # ./vm-curator.nix
-    # ./finger.nix
+    ./finger.nix
     # ./river.nix
     # ./kde.nix
     ./kdeconnect.nix
@@ -71,5 +73,6 @@
     ./lazygit.nix
     ./postgresql.nix
     ./craftapss.nix
+    ./linger.nix
   ];
 }
