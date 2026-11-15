@@ -33,13 +33,13 @@
     ./tuned.nix
     # ./power-profiles-daemon.nix
     ./user.nix
-    # ./gnome.nix
+    ./gnome.nix
     ./appimage.nix
     ./displaymanager.nix
     ./bluetooth.nix
-    ./ollama.nix
+    # ./ollama.nix
     ./services.nix
-    ./zapret-discord-youtube.nix
+    # ./zapret-discord-youtube.nix
     #TEST HAPP
     ./happ-module.nix
     ./test-happ.nix

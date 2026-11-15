@@ -1,10 +1,10 @@
-{ unstable, ... }:
+# { unstable, ... }:
 
 {
   services.fprintd = {
     enable = true;
     # package = pkgs.unstable.fprintd;
-    package = unstable.fprintd;
+    # package = unstable.fprintd;
   };
   security.pam.services = {
     sudo.fprintAuth = true;

@@ -7,9 +7,9 @@
   nixpkgs.config = {
     allowUnfree = true;
     android_sdk.accept_license = true;
-    permittedInsecurePackages = [
-      "ventoy-gtk3-1.1.12"
-    ];
+    # permittedInsecurePackages = [
+    # "ventoy-gtk3-1.1.12"
+    # ];
   };
   # nixpkgs.hostPlatform = {
   #   system = "x86_64-linux";

@@ -1,7 +1,7 @@
 {
   services.zapret-discord-youtube = {
     enable = true;
-    configName = "general(ALT9)";
+    configName = "general(ALT11)";
     gameFilter = "all";
     listGeneral = [
       # ##добавлние url для работы запрета , тоесть запрет влият на аднные url
@@ -63,8 +63,8 @@
     ipsetExclude = [
       "45.137.148.81"
       "78.142.230.107"
-      "127.0.0.1"
-      "127.0.0.2"
+      # "127.0.0.1"
+      # "127.0.0.2"
     ];
   };
 }

@@ -1,8 +1,7 @@
 {
   inputs,
   pkgs,
-  unstable,
-  bitwig-pkgs,
+  # unstable,
   ...
 }:
 {
@@ -10,12 +9,11 @@
     allowUnfree = true;
   };
   environment.systemPackages = with pkgs; [
-    # (bitwig-pkgs.bitwig-studio6.overrideAttrs (old: {
-    #   postInstall = (old.postInstall or "") + ''
-    #     cp ${./bitwig.jar} $out/libexec/bin/bitwig.jar
-    #   '';
-    # }))
-    inputs.helix.packages.${pkgs.stdenv.hostPlatform.system}.default
+    ###TEST_NINA
+    # inputs.nina.packages.${pkgs.stdenv.hostPlatform.system}.nina
+
+    # inputs.helix.packages.${pkgs.stdenv.hostPlatform.system}.default
+    # horizon-launcher
     ###for helix
     #FOR_GO
     gopls
@@ -35,8 +33,9 @@
 
     # inputs.tele.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.amane.packages.x86_64-linux.default
-    inputs.fetch.packages.${pkgs.stdenv.hostPlatform.system}.default
-    inputs.polymc.packages.${pkgs.stdenv.hostPlatform.system}.default
+    # inputs.fetch.packages.${pkgs.stdenv.hostPlatform.system}.default
+    polymc
+    # inputs.polymc.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
     # inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
 
@@ -44,8 +43,6 @@
     #TEST XMPP
     movim
     gajim
-    unstable.kaidan
-    movim
     dino
     ###WINE
     wineWow64Packages.staging
@@ -60,25 +57,14 @@
     ###HYPR_UTIL
     # hyprshot
     ###EMACS
-    emacs-pgtk
-    emacsPackages.vterm
-    # fd
-    shellcheck
-    # isync
-    # emacsPackages.mu4e
-    # mu
-    # imagemagick
     ripgrep
-    shfmt
     html-tidy
     stylelint
     js-beautify
     black
     pipenv
     python313Packages.pytest
-    # emacsPackages.pytest
     ### FOR PENTEST
-
     john
     python314Packages.dirsearch
     burpsuite
@@ -92,26 +78,22 @@
     strace
     ltrace
     ghidra-bin
-    # cutter
-
     wireshark
     nmap
     ###SOCIETY###
     discord
     # vesktop
-    cinny-desktop
+    # cinny-desktop
     fluffychat
     element-desktop
     ayugram-desktop
     ###FOR_DESKTOP_AND_JOKES###
-
     gopass
     pinentry-curses
-
     dosbox-staging
     wireguard-tools
-    ventoy-full-gtk
-    unstable.obsidian
+    # ventoy-full-gtk
+    obsidian
     chromium
     kdePackages.filelight
     gparted-full
@@ -129,13 +111,10 @@
     awww
     brightnessctl
     eog
-    ##EDITORS_FOR_WORD###
+    cava
     onlyoffice-desktopeditors
-    ###JUST_NAUTILIUS###
     nautilus
-    ###GAMES###
     osu-lazer-bin
-    # opentabletdriver
     qbittorrent
     ###FOR_PROGRAMMING###
     typescript
@@ -155,10 +134,9 @@
     gtk3
     nsis
     upx
-
     ###FYNE
     fyne
-
+    ###OTHER
     python3
     postman
     nodejs_26
@@ -169,7 +147,7 @@
     gore
     multimarkdown
     nixfmt
-    ida-free
+    # ida-free
     ###TYPST###
     # typstwriter
     # typst-live
@@ -183,26 +161,24 @@
     # TRY FROM NUR
     # nur.repos.hythera.waterfox-bin
     nur.repos.trev.helium
-
-    unstable.quickshell
-    # unstable.noctalia-shell
-    unstable.gcc
-    unstable.clang
-    unstable.fasm
-    unstable.uv
-    unstable.go
-    unstable.wails
-    unstable.protonup-qt
-    # unstable.obsidian
-    unstable.zig
-    unstable.fastfetch
-    unstable.dioxus-cli
-    unstable.opencode
-    unstable.quickshell
-    ###FOR ESO
+    ###UNSTABLE
+    quickshell
+    gcc
+    clang
+    fasm
+    uv
+    go
+    wails
+    protonup-qt
+    zig
+    fastfetch
+    dioxus-cli
+    opencode
+    quickshell
+    ###FOR ESP
     espup
     esp-generate
-    unstable.espflash
+    espflash
     probe-rs-tools
     ###FOR LOCAL AI
     llama-cpp-vulkan

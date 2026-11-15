@@ -2,68 +2,79 @@
   description = "A very basic flake";
 
   inputs = {
-    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
-    nixpkgs-old.url = "github:Nixos/nixpkgs/nixos-25.11";
-    bitwig.url = "github:Nixos/nixpkgs/655e3354167d63919a7f376897aa762d45d595e9";
+    # Основной nixpkgs — unstable
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
+    # Stable — для пакетов, которые сломаны или нестабильны в unstable
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-26.05";
+
+    # Отдельная ревизия для Bitwig
+    bitwig.url = "github:NixOS/nixpkgs/655e3354167d63919a7f376897aa762d45d595e9";
+
     polymc = {
       url = "github:PolyMC/PolyMC";
-      # inputs.nixpkgs.follows = "nixpkgs-old";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
-    zapret-discord-youtube.url = "github:kartavkun/zapret-discord-youtube";
-    nix-craftapps.url = "github:olafkfreund/nix-craftapps";
-    amane.url = "github:MystiaFin/amane";
-    tg-ws-proxy.url = "github:pialtor/tg-ws-proxy-flake";
-    lecoo-control-center.url = "path:/home/hxteher/git_downloads/Lecoo-Control-Center";
-    hermes-agent.url = "github:NousResearch/hermes-agent";
-    # fenix={
-    # url = "github:nix-community/fenix";
-    # inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    zapret-discord-youtube = {
+      url = "github:kartavkun/zapret-discord-youtube";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nix-craftapps = {
+      url = "github:olafkfreund/nix-craftapps";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    amane = {
+      url = "github:MystiaFin/amane";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    tg-ws-proxy = {
+      url = "github:pialtor/tg-ws-proxy-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    lecoo-control-center = {
+      url = "path:/home/hxteher/git_downloads/Lecoo-Control-Center";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    horizon = {
+      url = "github:horizon-rust/horizon";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nur = {
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     neu-nix = {
       url = "github:ricardomaps/neu-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     home-manager = {
       url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
+
     nixvim = {
       url = "github:nix-community/nixvim";
-      # url = "github:nix-community/nixvim/nixos-26.05";
-      # inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
-    # umbriel = {
-    # url = "github:noctalia-dev/umbriel";
-    # };
-    tele = {
-      url = "github:sorokin-vladimir/tele";
-      # inputs.nixpkgs.follows = "nixpkgs-unstable";
+
+    hermes-agent = {
+      url = "github:NousResearch/hermes-agent";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
-    # niri.url = "github:sodiboo/niri-flake";
-    # vm-curator.url = "github:mroboff/vm-curator";
-    # hyprland.url = "github:hyprwm/Hyprland";
-    # hyprland-plugins = {
-    # url = "github:hyprwm/hyprland-plugins";
-    # inputs.hyprland.follows = "hyprland";
-    # };
+
+    # tele.url = "github:sorokin-vladimir/tele";
+
     noctalia = {
       url = "github:noctalia-dev/noctalia";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
-    # ghostty = {
-    # url = "github:ghostty-org/ghostty";
-    # inputs.nixpkgs.follows = "nixpkgs";
-    # };
-    fetch.url = "github:areofyl/fetch";
-    helix.url = "github:helix-editor/helix";
-    # xwayland-satellite.url = "github:Supreeeme/xwayland-satellite";
-    # nina = {
-    # url = "https://kepr.uk/nina";
+
+    # fetch.url = "github:areofyl/fetch";
+    # helix = {
+    #   url = "github:helix-editor/helix";
     # inputs.nixpkgs.follows = "nixpkgs";
     # };
   };
@@ -72,94 +83,95 @@
     {
       self,
       nixpkgs,
-      nixpkgs-unstable,
+      nixpkgs-stable,
       home-manager,
       nixvim,
       polymc,
-      noctalia,
       bitwig,
-      # ghostty,
       neu-nix,
-      # niri,
-      fetch,
-      helix,
+      # fetch,
       zapret-discord-youtube,
       nix-craftapps,
       tg-ws-proxy,
       lecoo-control-center,
       hermes-agent,
       nur,
-      # umbriel,
-      # xwayland-satellite,
+      horizon,
       ...
     }@inputs:
+
     let
       system = "x86_64-linux";
 
-      # hostConfig = {
-      # al
-      # }
-      unstable = import nixpkgs-unstable {
+      # Stable nixpkgs
+      stable = import nixpkgs-stable {
         inherit system;
         config.allowUnfree = true;
       };
+
+      # Отдельный nixpkgs для Bitwig
       bitwig-pkgs = import bitwig {
         inherit system;
         config.allowUnfree = true;
       };
-      # rustToolchain = fenix.packages.${system}.stable.toolchain;
+
     in
     {
-      #TG WS PROXY
+      # TG WS PROXY
       packages.${system}.tg-ws-proxy = tg-ws-proxy.packages.${system}.default;
-      apps.${system}.tg-ws-proxy = tg-ws-proxy.apps.${system}.default; # Если нужен запуск одной командой
-      #
-      # nixos - system hostname
+
+      apps.${system}.tg-ws-proxy = tg-ws-proxy.apps.${system}.default;
+
+      # NixOS
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+        inherit system;
+
         specialArgs = {
-          # unstable = import nixpkgs-unstable {
-          # inherit system;
-          # config.allowUnfree = true;
-          # };
           inherit
-            unstable
             inputs
             system
+            stable
             bitwig-pkgs
-
             ;
-          #TEST
+
           neu = neu-nix;
+
           nur = import nur {
-            nurpkgs = nixpkgs;
+            nurpkgs = nixpkgs.legacyPackages.${system};
             inherit system;
           };
         };
 
         modules = [
           {
+            nixpkgs.config.allowUnfree = true;
+
             nixpkgs.overlays = [
+              # horizon.overlays.default
               polymc.overlay
               nur.overlays.default
               neu-nix.overlays.default
             ];
           }
-          # niri.nixosModules.niri
+
+          horizon.nixosModules.default
           nix-craftapps.nixosModules.default
           zapret-discord-youtube.nixosModules.withTestTools
           lecoo-control-center.nixosModules.default
+
           ./nixos/configuration.nix
         ];
       };
+
+      # Home Manager
       homeConfigurations.hxteher = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
-        extraSpecialArgs = {
-          inherit unstable inputs;
 
-          # unstable = import nixpkgs-unstable {
-          # inherit system;
-          # config.allowUnfree = true;
-          # };
+        extraSpecialArgs = {
+          inherit
+            inputs
+            stable
+            ;
         };
 
         modules = [

@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   services.desktopManager.gnome.enable = true;
 
@@ -9,4 +10,11 @@
 
   #GNOME connector browser
   services.gnome.gnome-browser-connector.enable = true;
+  environment.systemPackages = with pkgs; [
+    gnome-tweaks
+    gnomeExtensions.dash-to-dock
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.just-perfection
+    gnomeExtensions.appindicator
+  ];
 }

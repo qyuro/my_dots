@@ -1,9 +1,11 @@
-{pkgs,...}:
+{ stable, ... }:
 {
-  environment.systemPackages = with pkgs;[
-    (cutter.withPlugins (ps: with ps; [
-      jsdec
-      rz-ghidra
-    ]))
+  environment.systemPackages = [
+    (stable.cutter.withPlugins (
+      ps: with ps; [
+        jsdec
+        rz-ghidra
+      ]
+    ))
   ];
 }
