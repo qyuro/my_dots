@@ -36,7 +36,7 @@
     # inputs.fetch.packages.${pkgs.stdenv.hostPlatform.system}.default
     polymc
     # inputs.polymc.packages.${pkgs.stdenv.hostPlatform.system}.default
-    inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+    # inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
     # inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     ghostty

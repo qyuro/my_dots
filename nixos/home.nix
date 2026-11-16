@@ -9,8 +9,8 @@
     homeDirectory = "/home/hxteher";
     stateVersion = "26.05";
   };
-  useGlobalPkgs = true;
-  useUserPackages = true;
+  # useGlobalPkgs = true;
+  # useUserPackages = true;
 
   programs.home-manager.enable = true;
   nixpkgs.config.allowUnfree = true;

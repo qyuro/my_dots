@@ -3,6 +3,7 @@
     NH_FLAKE = "/home/hxteher/my_dots";
     NH_OS_FLAKE = "/home/hxteher/my_dots";
     NIXOS_OZONE_WL = "1";
+    QT_QPA_PLATFORMTHEME = "generic";
     # MOZ_ENABLE_WAYLAND = "1";
     # GDK_BACKEND = "wayland,x11";
     # ELECTRON_OZONE_PLATFORM = "auto";
