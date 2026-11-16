@@ -1,6 +1,6 @@
 {
   environment.variables = {
-    NH_FLAKE="/home/hxteher/my_dots";
+    NH_FLAKE = "/home/hxteher/my_dots";
     NH_OS_FLAKE = "/home/hxteher/my_dots";
     NIXOS_OZONE_WL = "1";
     # MOZ_ENABLE_WAYLAND = "1";

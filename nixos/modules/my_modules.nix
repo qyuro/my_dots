@@ -23,6 +23,7 @@
     # ./zsh.nix
     ./fish.nix
     # ./nushell.nix
+    ./kineticwe.nix
     ./niri.nix
     ./throne.nix
     ./packages.nix

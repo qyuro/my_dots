@@ -11,6 +11,10 @@
     # Отдельная ревизия для Bitwig
     bitwig.url = "github:NixOS/nixpkgs/655e3354167d63919a7f376897aa762d45d595e9";
 
+    kineticwe = {
+      url = "gitlab:theblackdon/kineticwe";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     polymc = {
       url = "github:PolyMC/PolyMC";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -97,6 +101,7 @@
       hermes-agent,
       nur,
       horizon,
+      kineticwe,
       ...
     }@inputs:
 
@@ -158,7 +163,7 @@
           nix-craftapps.nixosModules.default
           zapret-discord-youtube.nixosModules.withTestTools
           lecoo-control-center.nixosModules.default
-
+          kineticwe.nixosModules.default
           ./nixos/configuration.nix
         ];
       };

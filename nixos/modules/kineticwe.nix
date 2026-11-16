@@ -1,0 +1,3 @@
+{
+  programs.kineticwe.enable = true;
+}
