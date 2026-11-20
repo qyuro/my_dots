@@ -1,4 +1,9 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  unstable,
+  lib,
+  ...
+}:
 
 {
   programs.nixvim = {
@@ -17,7 +22,12 @@
     };
   };
   home.packages = with pkgs; [
-    clang
+    # (lib.hiPrio unstable.clang) # иначе bin/ld.bfd конфликтует с gcc-wrapper в home-manager-path
+    unstable.clang
     clang-tools
+    lldb
+    # unstable.gcc
+    cmake
+    gnumake
   ];
 }

@@ -2,19 +2,40 @@
   description = "A very basic flake";
 
   inputs = {
-    # Основной nixpkgs — unstable
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    #nixpkgs — unstable
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     # Stable — для пакетов, которые сломаны или нестабильны в unstable
-    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-26.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
 
     # Отдельная ревизия для Bitwig
-    bitwig.url = "github:NixOS/nixpkgs/655e3354167d63919a7f376897aa762d45d595e9";
+    bitwig.url = "github:Nixos/nixpkgs/02f5696b0e6097e589076d886b317b83ff0437d7";
+    # bitwig.url = "github:NixOS/nixpkgs/3633f4ab859cd646d244802286d916f107ffeda7";
+    # bitwig.url = "github:Nixos/nixpkgs/767b0d3ec98a143ad9ed7dfc0d5553510ac27133";
 
-    kineticwe = {
-      url = "gitlab:theblackdon/kineticwe";
+    nxv.url = "github:utensils/nxv";
+
+    # kineticwe = {
+    # url = "gitlab:theblackdon/kineticwe";
+    # inputs.nixpkgs.follows = "nixpkgs";
+    # };
+
+    hyprland = {
+      url = "github:hyprwm/Hyprland/v0.55.4";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # hyprexpo = {
+    # url = "github:sandwichfarm/hyprexpo";
+    # inputs.nixpkgs.follows = "nixpkgs";
+    # inputs.hyprland.follows = "hyprland"; # критично
+    # };
+    hy3 = {
+      url = "github:outfoxxed/hy3?ref=hl0.55.0";
+      inputs.hyprland.follows = "hyprland";
+    };
+
+    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
+
     polymc = {
       url = "github:PolyMC/PolyMC";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -29,7 +50,7 @@
     };
     amane = {
       url = "github:MystiaFin/amane";
-      inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.nixpkgs.follows = "nixpkgs";
     };
     tg-ws-proxy = {
       url = "github:pialtor/tg-ws-proxy-flake";
@@ -40,10 +61,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    horizon = {
-      url = "github:horizon-rust/horizon";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # horizon = {
+    # url = "github:horizon-rust/horizon";
+    # inputs.nixpkgs.follows = "nixpkgs";
+    # };
     nur = {
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -55,7 +76,7 @@
     };
 
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -87,7 +108,7 @@
     {
       self,
       nixpkgs,
-      nixpkgs-stable,
+      nixpkgs-unstable,
       home-manager,
       nixvim,
       polymc,
@@ -100,16 +121,24 @@
       lecoo-control-center,
       hermes-agent,
       nur,
-      horizon,
-      kineticwe,
+      # horizon,
+      # kineticwe,
+      nix-cachyos-kernel,
+      nxv,
+      # hyprexpo,
       ...
     }@inputs:
 
     let
       system = "x86_64-linux";
 
-      # Stable nixpkgs
-      stable = import nixpkgs-stable {
+      stable = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
+
+      # unstable nixpkgs
+      unstable = import nixpkgs-unstable {
         inherit system;
         config.allowUnfree = true;
       };
@@ -136,6 +165,7 @@
             inputs
             system
             stable
+            unstable
             bitwig-pkgs
             ;
 
@@ -156,34 +186,59 @@
               polymc.overlay
               nur.overlays.default
               neu-nix.overlays.default
+              # hyprexpo.overlays.default
+              nix-cachyos-kernel.overlays.pinned
+              nxv.overlays.default
             ];
           }
 
-          horizon.nixosModules.default
+          # horizon.nixosModules.default
           nix-craftapps.nixosModules.default
           zapret-discord-youtube.nixosModules.withTestTools
           lecoo-control-center.nixosModules.default
-          kineticwe.nixosModules.default
+          # kineticwe.nixosModules.default
           ./nixos/configuration.nix
+
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.sharedModules = [
+              nixvim.homeModules.nixvim
+              hermes-agent.homeManagerModules.default
+            ];
+
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+
+            home-manager.extraSpecialArgs = {
+              inherit
+                inputs
+                stable
+                unstable
+                system
+                ;
+            };
+
+            home-manager.users.hxteher = import ./nixos/home.nix;
+          }
         ];
       };
 
-      # Home Manager
-      homeConfigurations.hxteher = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.${system};
-
-        extraSpecialArgs = {
-          inherit
-            inputs
-            stable
-            ;
-        };
-
-        modules = [
-          ./nixos/home.nix
-          nixvim.homeModules.nixvim
-          hermes-agent.homeManagerModules.default
-        ];
-      };
+      #   # Home Manager
+      # homeConfigurations.hxteher = home-manager.lib.homeManagerConfiguration {
+      #     pkgs = nixpkgs.legacyPackages.${system};
+      #
+      #     extraSpecialArgs = {
+      #       inherit
+      #         inputs
+      #         stable
+      #         ;
+      #     };
+      #
+      #     modules = [
+      #       ./nixos/home.nix
+      #       nixvim.homeModules.nixvim
+      #       hermes-agent.homeManagerModules.default
+      #     ];
+      #   };
     };
 }

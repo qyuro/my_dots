@@ -1,3 +1,4 @@
+{ lib, unstable, ... }:
 {
   programs.throne = {
     enable = true;
@@ -5,5 +6,6 @@
       enable = true;
       setuid = true;
     };
+    # package = unstable.throne;
   };
 }

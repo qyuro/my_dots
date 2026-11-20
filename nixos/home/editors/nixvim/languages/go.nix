@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, unstable, ... }:
 {
   programs.nixvim = {
     plugins.lsp.servers.gopls = {
@@ -32,8 +32,17 @@
     };
   };
   home.packages = with pkgs; [
-    go
+    unstable.go
     gosimports
     go-tools
+    fyne
+    gore
+    wails
+
+    gopls
+    golangci-lint-langserver
+    golangci-lint
+    gomodifytags
+    gotests
   ];
 }

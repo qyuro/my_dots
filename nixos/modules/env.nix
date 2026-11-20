@@ -4,7 +4,8 @@
     NH_OS_FLAKE = "/home/hxteher/my_dots";
     NIXOS_OZONE_WL = "1";
     QT_QPA_PLATFORMTHEME = "generic";
-    # MOZ_ENABLE_WAYLAND = "1";
+    MOZ_ENABLE_WAYLAND = "1";
+    # LD_LIBRARY_PATH = "/run/current-system/sw/lib";
     # GDK_BACKEND = "wayland,x11";
     # ELECTRON_OZONE_PLATFORM = "auto";
     # SDL_VIDEODRIVER = "wayland,x11";

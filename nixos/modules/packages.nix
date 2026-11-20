@@ -1,69 +1,39 @@
 {
   inputs,
   pkgs,
-  # unstable,
+  unstable,
   ...
 }:
+
 {
   nixpkgs.config = {
     allowUnfree = true;
   };
   environment.systemPackages = with pkgs; [
-    ###TEST_NINA
-    # inputs.nina.packages.${pkgs.stdenv.hostPlatform.system}.nina
 
-    # inputs.helix.packages.${pkgs.stdenv.hostPlatform.system}.default
+    ###FROM FLAKES
+    nxv
     # horizon-launcher
-    ###for helix
-    #FOR_GO
-    gopls
-    golangci-lint-langserver
-    golangci-lint
-    gomodifytags
-    gotests
-    #FOR_C
-    clang-tools
-    lldb
-    #FOR_PY
-    ruff
-    ty
-    python313Packages.jedi-language-server
-    python313Packages.python-lsp-server
-    zuban
-
-    # inputs.tele.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.amane.packages.x86_64-linux.default
-    # inputs.fetch.packages.${pkgs.stdenv.hostPlatform.system}.default
     polymc
-    # inputs.polymc.packages.${pkgs.stdenv.hostPlatform.system}.default
-    # inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
-    # inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
-
-    ghostty
-    #TEST XMPP
+    inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+    #XMPP
     movim
     gajim
     dino
     ###WINE
-    wineWow64Packages.staging
+    wineWow64Packages.yabridge
     winetricks
     yabridge
     yabridgectl
+    # (yabridgectl.override { wine = wineWow64Packages.stagingFull; })
     ###FORGAME
     faugus-launcher
     ###TONELIB
+    carla
+    neural-amp-modeler-lv2
     guitarix
     guitarix-vst
-    ###HYPR_UTIL
-    # hyprshot
-    ###EMACS
-    ripgrep
-    html-tidy
-    stylelint
-    js-beautify
-    black
-    pipenv
-    python313Packages.pytest
     ### FOR PENTEST
     john
     python314Packages.dirsearch
@@ -88,6 +58,7 @@
     element-desktop
     ayugram-desktop
     ###FOR_DESKTOP_AND_JOKES###
+    aria2
     gopass
     pinentry-curses
     dosbox-staging
@@ -98,7 +69,6 @@
     kdePackages.filelight
     gparted-full
     p7zip
-    hyprpolkitagent
     hyperfine
     yazi
     duf
@@ -134,55 +104,36 @@
     gtk3
     nsis
     upx
-    ###FYNE
-    fyne
     ###OTHER
-    python3
     postman
     nodejs_26
     usbutils
-    gnumake
-    cmake
     subversion
-    gore
+    # gore
     multimarkdown
-    nixfmt
     # ida-free
     ###TYPST###
-    # typstwriter
     # typst-live
     typst
-    # tinymist
-    # typstyle
     ###TOR
     tor
     tor-browser
-    # torsocks
     # TRY FROM NUR
-    # nur.repos.hythera.waterfox-bin
     nur.repos.trev.helium
     ###UNSTABLE
-    quickshell
-    gcc
-    clang
-    fasm
-    uv
-    go
-    wails
-    protonup-qt
+    # go
+    unstable.protonup-qt
     zig
     fastfetch
     dioxus-cli
-    opencode
-    quickshell
+    unstable.opencode
+    unstable.quickshell
     ###FOR ESP
-    espup
-    esp-generate
-    espflash
-    probe-rs-tools
+    unstable.espup
+    unstable.esp-generate
+    unstable.espflash
+    unstable.probe-rs-tools
     ###FOR LOCAL AI
-    llama-cpp-vulkan
-    # llama-cpp-rocm
-    # llama-cpp
+    unstable.llama-cpp-vulkan
   ];
 }

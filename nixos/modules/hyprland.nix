@@ -1,4 +1,4 @@
-{pkgs,inputs,unstable,...}:
+{ pkgs, inputs, ... }:
 {
   programs.hyprland = {
     enable = true;
@@ -6,14 +6,18 @@
     withUWSM = false;
     # package = unstable.pkgs.hyprland;
     # portalPackage = unstable.pkgs.xdg-desktop-portal-hyprland;
-    # package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-    # portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    portalPackage =
+      inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
   };
   # xdg.portal = {
   # enable = true;
   # extraPortals = [
-      # pkgs.xdg-desktop-portal-hyprland
-      # inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland
-    # ];
+  # pkgs.xdg-desktop-portal-hyprland
+  # inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland
+  # ];
   # };
+  environment.systemPackages = with pkgs; [
+    hyprshot
+  ];
 }

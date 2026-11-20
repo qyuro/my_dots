@@ -17,24 +17,26 @@
     ./steam.nix
     ./locale.nix
     # ./for_x.nix
+    ./for_plugins.nix
     ./pipewire.nix
     ./git.nix
     ./qemu.nix
     # ./zsh.nix
     ./fish.nix
     # ./nushell.nix
-    ./kineticwe.nix
+    # ./kineticwe.nix
     ./niri.nix
     ./throne.nix
     ./packages.nix
     ./cutter.nix
     ./bitwig.nix
     ./firefox.nix
+    # ./i2p.nix
     ./lact.nix
     ./tuned.nix
     # ./power-profiles-daemon.nix
     ./user.nix
-    ./gnome.nix
+    # ./gnome.nix
     ./appimage.nix
     ./displaymanager.nix
     ./bluetooth.nix
@@ -44,7 +46,7 @@
     #TEST HAPP
     ./happ-module.nix
     ./test-happ.nix
-    # ./hyprland.nix
+    ./hyprland.nix
     ./nixld.nix
     # ./sway.nix
     ./obs.nix
@@ -67,7 +69,7 @@
     ./wireshark.nix
     # ./umbriel.nix
     # ./jack.nix
-    ./tor.nix
+    # ./tor.nix
     ./nh.nix
     ./env.nix
     ./pam.nix

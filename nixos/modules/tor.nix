@@ -8,11 +8,20 @@
       enable = true;
     };
     settings = {
-      CookieAuthentication = true;
+      SocksPort = [
+        "127.0.0.1:9050"
+      ];
+      SafeSocks = true;
+      TestSocks = true;
+
       AvoidDiskWrites = 1;
-      HardwareAccel = 1;
+
+      DownloadExtraInfo = false;
+
       SafeLogging = 1;
-      NumCPUs = 4;
+
+      # CookieAuthentication = true;
+      # HardwareAccel = 1;
     };
   };
 }

@@ -5,6 +5,9 @@
     firewall = {
       enable = true;
       allowPing = false;
+
+      allowedTCPPorts = [ 23145 ];
+      allowedUDPPorts = [ 23145 ];
     };
     # nftables.enable = true;
     #FOR TEST GITLAB/DOCKER
